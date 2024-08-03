@@ -174,15 +174,10 @@ img {
     width: 40px;
     height: 30px;
     cursor: pointer;
-<<<<<<< Updated upstream
-    position: relative;
-    z-index: 1000;
-=======
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 1001;
->>>>>>> Stashed changes
 }
 
 .hamburger-menu .bar {

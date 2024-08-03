@@ -5,13 +5,13 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    user-select: none;
+    user-select: none; /* Prevent text selection across the body */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1200px; /* Set a max-width for better control */
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 15px; /* Add some horizontal padding */
 }
 
 h1 {
@@ -34,9 +34,9 @@ h1 {
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+    margin: 40px auto; /* Centered and spaced from the top */
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .planet-card {
@@ -44,14 +44,14 @@ h1 {
     border-radius: 10px;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding is included in width */
     transition: transform 0.3s ease-out;
-    user-select: none;
+    user-select: none; /* Prevent text selection on the planet card */
 }
 
 .planet-card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Scale image to container width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
@@ -72,8 +72,8 @@ li {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensure images do not exceed container width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Hamburger Menu Styles */
@@ -116,6 +116,7 @@ img {
 }
 
 .menu.show {
+    display: block;
     transform: translateX(0);
 }
 
@@ -142,9 +143,10 @@ img {
 }
 
 .menu a:hover {
-    color: #f39c12;
+    color: #f39c12; /* Change to your preferred hover color */
 }
 
+/* Animation for Hamburger Menu */
 .hamburger-menu.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
 }

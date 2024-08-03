@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
             planetCard.style.transition = 'none';
             planetCard.style.transform = 'translateX(0)';
             planetCard.style.transition = 'transform 0.3s ease-out';
-            currentPlanetIndex = (direction === 'left') 
-                ? (currentPlanetIndex + 1) % planetData.length 
+            currentPlanetIndex = (direction === 'left')
+                ? (currentPlanetIndex + 1) % planetData.length
                 : (currentPlanetIndex - 1 + planetData.length) % planetData.length;
             loadPlanet(currentPlanetIndex);
         }, 300);

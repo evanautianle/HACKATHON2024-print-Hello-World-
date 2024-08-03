@@ -1,6 +1,5 @@
 /* General Reset */
 * {
-<<<<<<< Updated upstream
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,16 +31,14 @@
     display: block;
     background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity to your preference */
     visibility: visible;
-=======
     font-family: "Arimo";
 }
 
-.arimo-<uniquifier> {
+.arimo-uniquifier {
     font-family: "Arimo", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: weight;
     font-style: normal;
->>>>>>> Stashed changes
 }
 
 #end {
@@ -58,29 +55,19 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-<<<<<<< Updated upstream
     user-select: none; /* Prevent text selection across the body */
     height: 100%;
-=======
-    user-select: none;
-    /* Prevent text selection across the body */
->>>>>>> Stashed changes
 }
 
 .container {
     max-width: 1200px;
     /* Set a max-width for better control */
     margin: 0 auto;
-<<<<<<< Updated upstream
     padding: 0 15px; /* Add some horizontal padding */
     background-image: url('path/to/your/background.gif'); /* Set the GIF background */
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Prevent repeating the image */
     background-position: center; /* Center the image */
-=======
-    padding: 0 15px;
-    /* Add some horizontal padding */
->>>>>>> Stashed changes
 }
 
 h1 {
@@ -147,16 +134,9 @@ h1 {
 }
 
 .planet-card img {
-<<<<<<< Updated upstream
     background: #000;
     width: 100%; /* Scale image to container width */
     height: auto; /* Maintain aspect ratio */
-=======
-    width: 100%;
-    /* Scale image to container width */
-    height: auto;
-    /* Maintain aspect ratio */
->>>>>>> Stashed changes
     border-radius: 10px;
 }
 
@@ -294,13 +274,8 @@ img {
 }
 
 .menu a:hover {
-<<<<<<< Updated upstream
     color: #f39c12; /* Change to your preferred hover color */
     transform: scale(1.05);
-=======
-    color: #f39c12;
-    /* Change to your preferred hover color */
->>>>>>> Stashed changes
 }
 
 /* Animation for Hamburger Menu */
@@ -437,4 +412,5 @@ img {
 
 .arrow-left i, .arrow-right i {
     pointer-events: none; /* Prevent the icon from blocking the click */
+}
 }

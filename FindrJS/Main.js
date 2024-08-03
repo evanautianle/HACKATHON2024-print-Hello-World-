@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Gambit', img: 'images/Gambit.png', info: 'Hes him' },
         { name: 'ChatGpt', img: 'images/Chatgpt.png', info: 'Our saviour' },
         { name: 'Diddy Planet', img: 'images/Diddy.png', info: 'Named after the american rapper, record producer and record executive, P Diddy' },
-        { name: 'Cooked Planet', img: 'images/Cooked', info: 'Lava planet where viallian arcs begin. Its litterally cooked' },
+        { name: 'Cooked Planet', img: 'images/Cooked.png', info: 'Lava planet where viallian arcs begin. Its litterally cooked' },
     ];
     let currentPlanetIndex = 0;
 

@@ -444,3 +444,14 @@ img {
 #timer {
     font-size: 15px; /* Adjust the font size as needed */
 }
+
+/* Add these styles to your CSS */
+.planet-card.red-border {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7)); /* Inner glow */
+}
+
+.planet-card.green-border {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.7); /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.7)); /* Inner glow */
+}

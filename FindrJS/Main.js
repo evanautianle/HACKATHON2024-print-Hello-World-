@@ -117,13 +117,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function swipe(direction) {
         const offset = direction === 'left' ? '-100%' : '100%';
+        const borderClass = direction === 'left' ? 'red-border' : 'green-border';
+        
+        // Add border class based on swipe direction
+        planetCard.classList.add(borderClass);
+    
         planetCard.style.transform = `translateX(${offset})`;
-
+    
         setTimeout(() => {
             planetCard.style.transition = 'none';
             planetCard.style.transform = 'translateX(0)';
             planetCard.style.transition = 'transform 0.3s ease-out';
-
+    
+            // Remove border class after swipe
+            planetCard.classList.remove('red-border', 'green-border');
+    
             if (direction === 'left') {
                 deletePlanet();
             } else if (direction === 'right') {
@@ -135,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loadPlanet(currentPlanetIndex);
         }, 300);
     }
+    
 
     function deletePlanet() {
         console.log('Deleting planet:', planetData[currentPlanetIndex]); // Debugging

@@ -394,13 +394,6 @@ img {
     opacity: 1;
 }
 
-.arrow-text {
-    color: #fff;
-    font-size: 0.9em;
-    margin-bottom: 10px; /* Space between text and arrow */
-    text-align: center; /* Center align the text */
-}
-
 /* Style specific to the left arrow */
 .arrow-left {
     left: 5px; 
@@ -413,8 +406,10 @@ img {
     animation-delay: 0.5s; /* Start the animation with a delay to create out-of-sync effect */
 }
 
+/* Hidden state for fade-out effect */
 .arrow.fade-out {
-    opacity: 0;
+    opacity: 0; /* Hide the arrow */
+    transition: opacity 0.5s ease; /* Ensure smooth fading */
 }
 
 .arrow-left i, .arrow-right i {

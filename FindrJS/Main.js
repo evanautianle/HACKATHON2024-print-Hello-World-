@@ -92,20 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('planet-fun-fact').textContent = planet.funFact;
     }
     
-    const arrowLeft = document.getElementById('arrow-left');
     const arrowRight = document.getElementById('arrow-right');
+    const arrowLeft = document.getElementById('arrow-left');
     let hasSwiped = false; // Flag to track if a swipe has occurred
 
     function hideArrows() {
-        arrowLeft.classList.add('fade-out');
         arrowRight.classList.add('fade-out');
+        arrowLeft.classList.add('fade-out');
     }
 
     function handleSwipe(startX, endX) {
         if (endX - startX > swipeThreshold) {
-            swipe('right'); // Swipe right to save
+            swipe('right'); // Swipe right
         } else if (startX - endX > swipeThreshold) {
-            swipe('left'); // Swipe left to delete
+            swipe('left'); // Swipe left
         }
 
         if (!hasSwiped) {

@@ -1,0 +1,103 @@
+Here lies some example planet data lol
+
+[
+    { 
+        name: 'Celestara', 
+        img: 'PlanetImages/planet0.png', 
+        info: 'Celestara is a captivating planet known for its ethereal beauty and serene environment. It lies within a distant star system, orbited by three moons that create a mesmerizing celestial dance in its night sky.', 
+        humidity: '60%', 
+        temperature: '18°C', 
+        population: '2.2 billion', 
+        funFact: 'Known for its serene beauty.' 
+    },
+    { 
+        name: 'Aetherion', 
+        img: 'PlanetImages/planet1.png', 
+        info: 'Aetherion has multicolored clouds and a vast ring system composed of shimmering ice crystals. Its atmosphere is rich in exotic gases, creating dazzling auroras that dance across the sky, visible even from its numerous, diverse moons.', 
+        humidity: '70%', 
+        temperature: '25°C', 
+        population: '17 million', 
+        funFact: 'Home to dazzling auroras.' 
+    },
+    { 
+        name: 'Nebularis', 
+        img: 'PlanetImages/planet2.png', 
+        info: 'Nebularis is a mysterious planet shrouded in dense, colorful nebulae, giving it an ever-shifting, cosmic appearance. Its surface, covered in dark, crystalline minerals, reflects the nebulae’s light. Currently uninhabited.', 
+        humidity: '90%', 
+        temperature: '12°C', 
+        population: '0', 
+        funFact: 'Covered in dark, crystalline minerals.' 
+    },
+    { 
+        name: 'Stellarion', 
+        img: 'PlanetImages/planet3.png', 
+        info: 'Often called the Red Planet due to its reddish appearance.', 
+        humidity: '30%', 
+        temperature: '20°C', 
+        population: '1.1 billion', 
+        funFact: 'Known as the Red Planet.' 
+    },
+    { 
+        name: 'Cat Girl Planet', 
+        img: 'PlanetImages/planet7.png', 
+        info: 'The largest planet in our solar system. Known for its Great Red Spot.', 
+        humidity: '40%', 
+        temperature: '22°C', 
+        population: '5 billion', 
+        funFact: 'Known for its Great Red Spot.' 
+    },
+    { 
+        name: 'Luminara', 
+        img: 'PlanetImages/planet10.png', 
+        info: 'Famous for its stunning ring system.', 
+        humidity: '55%', 
+        temperature: '15°C', 
+        population: '3.3 billion', 
+        funFact: 'Has a stunning ring system.' 
+    },
+    { 
+        name: 'Planet Evan', 
+        img: 'PlanetImages/evanplanet.png', 
+        info: 'Evan.', 
+        humidity: '50%', 
+        temperature: '16°C', 
+        population: '1 million', 
+        funFact: 'Named after its discoverer, Evan.' 
+    },
+    { 
+        name: 'Gambit', 
+        img: 'PlanetImages/Gambit.png', 
+        info: 'Hes him', 
+        humidity: '45%', 
+        temperature: '19°C', 
+        population: '2.5 million', 
+        funFact: 'Home to strategic thinkers.' 
+    },
+    { 
+        name: 'ChatGpt', 
+        img: 'PlanetImages/Chatgpt.png', 
+        info: 'Our saviour', 
+        humidity: '60%', 
+        temperature: '21°C', 
+        population: '8 billion', 
+        funFact: 'Known for its advanced AI.' 
+    },
+    { 
+        name: 'Diddy Planet', 
+        img: 'PlanetImages/Diddy.png', 
+        info: 'Named after the American rapper, record producer, and record executive, P Diddy', 
+        humidity: '65%', 
+        temperature: '23°C', 
+        population: '4 billion', 
+        funFact: 'Named after P Diddy.' 
+    },
+    { 
+        name: 'Cooked Planet', 
+        img: 'PlanetImages/Cooked.png', 
+        info: 'Lava planet where villain arcs begin. It’s literally cooked', 
+        humidity: '5%', 
+        temperature: '1500°C', 
+        population: 'Uninhabited', 
+        funFact: 'Surface temperatures can melt metal.' 
+    }
+];

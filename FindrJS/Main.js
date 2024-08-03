@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const countdownElement = document.getElementById('timer');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const menu = document.getElementById('menu');
+    const darkenOverlay = document.getElementById('darken-overlay');
 
     // Calculate the target time
     function calculateTargetTime() {
@@ -38,12 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownInterval = setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call to display immediately
 
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const menu = document.getElementById('menu');
-
+    // Opens the hamburger menu
     hamburgerMenu.addEventListener('click', () => {
         hamburgerMenu.classList.toggle('open');
         menu.classList.toggle('show');
+        darkenOverlay.classList.toggle('darken'); // Add or remove the darken class
     });
 
     let startX;

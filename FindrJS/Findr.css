@@ -5,6 +5,35 @@
     box-sizing: border-box;
 }
 
+.darken {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity to your preference */
+    z-index: 998; /* Ensure it is below the menu */
+    pointer-events: none; /* Allow interactions to pass through to underlying elements */
+}
+
+#darken-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    visibility: hidden;
+    z-index: 998;
+}
+
+#darken-overlay.darken {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity to your preference */
+    visibility: visible;
+}
+
+
 body {
     font-family: 'Arimo', Arial, sans-serif;
     background-color: #2C2C2C;
@@ -145,8 +174,15 @@ img {
     width: 40px;
     height: 30px;
     cursor: pointer;
+<<<<<<< Updated upstream
     position: relative;
     z-index: 1000;
+=======
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+>>>>>>> Stashed changes
 }
 
 .hamburger-menu .bar {

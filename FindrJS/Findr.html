@@ -9,25 +9,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="menu-container">
-        <img id="logo" src="images/logo.png" alt="Logo">
-        <div class="hamburger-menu" id="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <header class="header">
+        <div class="countdown">
+            <div id="timer">00:00:00</div>
         </div>
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#friends">Friends</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#planet ranks">Planet Ranks</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="logo-container">
+            <img id="logo" src="images/logo.png" alt="Logo">
+        </div>
+        <div class="menu-container">
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#friends">Friends</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#planet ranks">Planet Ranks</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="container">
         <div class="swipe-container">
             <div id="planet-card" class="planet-card">
@@ -36,27 +44,27 @@
                 <p id="planet-info">Weather, Climate, etc.</p>
                 <div class="stats">
                     <div class="stat-card">
+                        <i class="fa fa-tint stat-icon" aria-hidden="true"></i>
                         <h3>Humidity</h3>
                         <p id="planet-humidity">50%</p>
                     </div>
                     <div class="stat-card">
+                        <i class="fa fa-thermometer-half stat-icon" aria-hidden="true"></i>
                         <h3>Temperature</h3>
                         <p id="planet-temperature">15°C</p>
                     </div>
                     <div class="stat-card">
+                        <i class="fa fa-users stat-icon" aria-hidden="true"></i>
                         <h3>Population</h3>
                         <p id="planet-population">7.8 billion</p>
                     </div>
                     <div class="stat-card">
+                        <i class="fa fa-globe stat-icon" aria-hidden="true"></i>
                         <h3>Fun Fact</h3>
                         <p id="planet-fun-fact">Known for its diverse ecosystems.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="countdown">
-            <h2>Time Left to Choose a Planet:</h2>
-            <div id="timer">00:00:00</div>
+                
         </div>
     </div>
     <script src="Main.js"></script>

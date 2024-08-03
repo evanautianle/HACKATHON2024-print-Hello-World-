@@ -61,14 +61,15 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 30px; /* Increased padding for more space */
     background-color: #222;
     position: relative;
+    min-height: 80px; /* Ensures a taller header */
 }
 
 .header .countdown {
     margin: 0;
-    margin-right: 20px; /* Added margin to move the countdown more towards the left */
+    margin-right: 40px; /* Increased margin to move countdown more to the left */
 }
 
 .header #timer {
@@ -85,9 +86,8 @@ h1 {
 }
 
 .header #logo {
-    max-width: 30%;
+    max-width: 40%;
     border-radius: 300px;
-
 }
 
 .swipe-container {
@@ -110,6 +110,7 @@ h1 {
 }
 
 .planet-card img {
+    background: #000;
     width: 100%; /* Scale image to container width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
@@ -175,7 +176,7 @@ img {
     height: 30px;
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 23px;
     right: 20px;
     z-index: 1001;
 }

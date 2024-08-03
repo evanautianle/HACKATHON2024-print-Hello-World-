@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Aetherion', img: 'images/planet1.png', info: 'Aetherion has multicolored clouds and a vast ring system composed of shimmering ice crystals. Its atmosphere is rich in exotic gases, creating dazzling auroras that dance across the sky, visible even from its numerous, diverse moons.' },
         { name: 'Nebularis', img: 'images/planet2.png', info: 'Nebularis is a mysterious planet shrouded in dense, colorful nebulae, giving it an ever-shifting, cosmic appearance. Its surface, covered in dark, crystalline minerals, reflects the nebulae\’s light. Currently uninhabited.' },
         { name: 'Stellarion', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
-        { name: 'Cat Girl Planet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
-        { name: 'Luminara', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },
+        { name: 'Cat Girl Planet', img: 'images/planet7.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
+        { name: 'Luminara', img: 'images/planet10.png', info: 'Famous for its stunning ring system.' },
         { name: 'Planet Evan', img: 'images/evanplanet.png', info: 'Evan.' },
         { name: 'Cooked Planet', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
     ];

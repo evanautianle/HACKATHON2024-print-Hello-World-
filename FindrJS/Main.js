@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Stellarion', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
         { name: 'Cat Girl Planet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
         { name: 'Luminara', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },
-        { name: 'Planet Tony', img: 'images/planet6.png', info: 'Known for its unique tilt and being an ice giant.' },
+        { name: 'Planet Evan', img: 'images/evanplanet.png', info: 'Evan.' },
         { name: 'Cooked Planet', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
     ];
     let currentPlanetIndex = 0;

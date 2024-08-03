@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findr - Swipe on Planets</title>
+    <link rel="stylesheet" href="Findr.css">
+</head>
+<body>
+    <div class="menu-container">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#friends">Friends</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Findr</h1>
+        <div class="countdown">
+            <h2>Time Left to Choose a Planet:</h2>
+            <div id="timer">00:00:00</div>
+        </div>
+        <div class="swipe-container">
+            <div id="planet-card" class="planet-card">
+                <img id="planet-image" src="images/planet1.png" alt="Current planet image">
+                <h2 id="planet-name">Planet Name</h2>
+                <p id="planet-info">Weather, Climate, etc.</p>
+            </div>
+        </div>
+        <div class="stats">
+            <h2>Popular Planets</h2>
+            <ul id="stats-list">
+                <!-- List of popular planets will appear here -->
+            </ul>
+        </div>
+    </div>
+    <script src="FindrJS/Main.js"></script>
+    
+</body>
+</html>

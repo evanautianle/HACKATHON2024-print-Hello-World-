@@ -61,7 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Cat Girl Planet', img: 'images/planet7.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
         { name: 'Luminara', img: 'images/planet10.png', info: 'Famous for its stunning ring system.' },
         { name: 'Planet Evan', img: 'images/evanplanet.png', info: 'Evan.' },
-        { name: 'Cooked Planet', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
+        { name: 'Gambit', img: 'images/Gambit.png', info: 'Hes him' }
+        { name: 'ChatGpt', img: 'images/Chatgpt.png', info: 'Our saviour' }
+        { name: 'Diddy Planet', img: 'images/Diddy.png', info: 'Named after the american rapper, record producer and record executive, P Diddy' }
+        { name: 'Cooked Planet', img: 'images/Cooked', info: 'Lava planet where viallian arcs begin. Its litterally cooked' }
     ];
     let currentPlanetIndex = 0;
 
@@ -76,25 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('planet-fun-fact').textContent = planet.funFact;
     }
     
-    const arrowLeft = document.getElementById('arrow-left');
-    const arrowRight = document.getElementById('arrow-right');
-    let hasSwiped = false; // Flag to track if a swipe has occurred
-
-    function hideArrows() {
-        arrowLeft.classList.add('fade-out');
-        arrowRight.classList.add('fade-out');
-    }
 
     function handleSwipe(startX, endX) {
         if (endX - startX > swipeThreshold) {
             swipe('right'); // Swipe right
         } else if (startX - endX > swipeThreshold) {
             swipe('left'); // Swipe left
-        }
-
-        if (!hasSwiped) {
-            hideArrows(); // Fade out arrows after the first swipe
-            hasSwiped = true; // Set flag to true
         }
     }
 

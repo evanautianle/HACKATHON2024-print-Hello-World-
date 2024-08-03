@@ -92,6 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('planet-fun-fact').textContent = planet.funFact;
     }
     
+    const arrowLeft = document.getElementById('arrow-left');
+    const arrowRight = document.getElementById('arrow-right');
+    let hasSwiped = false; // Flag to track if a swipe has occurred
+
+    function hideArrows() {
+        arrowLeft.classList.add('fade-out');
+        arrowRight.classList.add('fade-out');
+    }
 
     function handleSwipe(startX, endX) {
         if (endX - startX > swipeThreshold) {
@@ -99,7 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (startX - endX > swipeThreshold) {
             swipe('left'); // Swipe left to delete
         }
+
+        if (!hasSwiped) {
+            hideArrows(); // Fade out arrows after the first swipe
+            hasSwiped = true; // Set flag to true
+        }
     }
+
 
     function swipe(direction) {
         const offset = direction === 'left' ? '-100%' : '100%';
@@ -115,6 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (direction === 'right') {
                 savePlanet();
             }
+            currentPlanetIndex = (direction === 'left')
+                ? (currentPlanetIndex + 1) % planetData.length
+                : (currentPlanetIndex - 1 + planetData.length) % planetData.length;
+            loadPlanet(currentPlanetIndex);
         }, 300);
     }
 

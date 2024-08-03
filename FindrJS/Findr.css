@@ -1,6 +1,17 @@
+* {
+    font-family:"Arimo";
+}
+
+.arimo-<uniquifier> {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background-color: #2C2C2C;
     color: #fff;
     text-align: center;
     margin: 0;
@@ -157,4 +168,10 @@ img {
 
 .hamburger-menu.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -6px);
+}
+
+#logo {
+    max-width: 18%;
+    border-radius: 300px;
+    padding: 20px;
 }

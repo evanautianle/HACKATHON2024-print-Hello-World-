@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const countdownElement = document.getElementById('timer');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const menu = document.getElementById('menu');
+    const darkenOverlay = document.getElementById('darken-overlay');
 
     // Calculate the target time
     function calculateTargetTime() {
@@ -38,12 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownInterval = setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call to display immediately
 
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const menu = document.getElementById('menu');
-
+    // Opens the hamburger menu
     hamburgerMenu.addEventListener('click', () => {
         hamburgerMenu.classList.toggle('open');
         menu.classList.toggle('show');
+        darkenOverlay.classList.toggle('darken'); // Add or remove the darken class
     });
 
     let startX;
@@ -52,14 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const planetCard = document.getElementById('planet-card');
     const planetData = [
-        { name: 'Mercury', img: 'images/mercury.png', info: 'Closest planet to the Sun. It has a very thin atmosphere.' },
-        { name: 'Venus', img: 'images/venus.png', info: 'Known as Earth\'s sister planet due to its similar size and composition.' },
-        { name: 'Earth', img: 'images/earth.png', info: 'The only planet known to support life. It has a rich atmosphere and abundant water.' },
-        { name: 'Mars', img: 'images/mars.png', info: 'Often called the Red Planet due to its reddish appearance.' },
-        { name: 'Jupiter', img: 'images/jupiter.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
-        { name: 'Saturn', img: 'images/saturn.png', info: 'Famous for its stunning ring system.' },
-        { name: 'Uranus', img: 'images/uranus.png', info: 'Known for its unique tilt and being an ice giant.' },
-        { name: 'Neptune', img: 'images/neptune.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
+        { name: 'Lucasland', img: 'images/planet0.png', info: 'Closest planet to the Sun. It has a very thin atmosphere.' },
+        { name: 'GayPridePlanet', img: 'images/planet1.png', info: 'Known as Earth\'s sister planet due to its similar size and composition.' },
+        { name: 'poopoopeepee', img: 'images/planet2.png', info: 'The only planet known to support life. It has a rich atmosphere and abundant water.' },
+        { name: 'Skibidi', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
+        { name: 'CatGirlPlanet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
+        { name: 'RickandMorty', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },
+        { name: 'lgbtliberationland', img: 'images/planet6.png', info: 'Known for its unique tilt and being an ice giant.' },
+        { name: 'gedagedigadago', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
     ];
     let currentPlanetIndex = 0;
 
@@ -131,6 +133,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initial load
-    loadPlanet(currentPlanetIndex);
+    // Handle user creation form submission
+    const userForm = document.getElementById('userForm');
+    userForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+    
+        fetch('/create-user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }); 
 });
+

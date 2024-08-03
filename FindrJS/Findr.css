@@ -276,3 +276,53 @@ img {
     margin-right: 10px; /* Space between the icon and text */
     color: #fff; /* Icon color */
 }
+
+/* Define the horizontal bounce animation */
+@keyframes horizontal-bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px); /* Adjust the value for more or less movement */
+    }
+}
+
+/* Style for arrows */
+.arrow {
+    position: fixed;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for the arrow */
+    color: #fff; /* Arrow icon color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+    font-size: 1.5em; /* Size of the arrow icon */
+    transition: opacity 0.3s ease;
+    animation: horizontal-bounce 1s ease-in-out infinite; /* Apply the horizontal bounce animation */
+    opacity: 1;
+}
+
+/* Style specific to the left arrow */
+.arrow-left {
+    left: 5px; 
+    animation-delay: 0s; /* Animation starts immediately */
+}
+
+/* Style specific to the right arrow */
+.arrow-right {
+    right: 15px; 
+    animation-delay: 0.5s; /* Start the animation with a delay to create out-of-sync effect */
+}
+
+.arrow.fade-out {
+    opacity: 0;
+}
+
+.arrow-left i, .arrow-right i {
+    pointer-events: none; /* Prevent the icon from blocking the click */
+}

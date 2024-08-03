@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const planetCard = document.getElementById('planet-card');
     const planetData = [
         { name: 'Celestara', img: 'images/planet0.png', info: 'Celestara is a captivating planet known for its ethereal beauty and serene environment. It lies within a distant star system, orbited by three moons that create a mesmerizing celestial dance in its night sky.' },
-        { name: 'Aetherion', img: 'images/planet1.png', info: 'Known as Earth\'s sister planet due to its similar size and composition.' },
-        { name: 'Nebularis', img: 'images/planet2.png', info: 'The only planet known to support life. It has a rich atmosphere and abundant water.' },
+        { name: 'Aetherion', img: 'images/planet1.png', info: 'Aetherion has multicolored clouds and a vast ring system composed of shimmering ice crystals. Its atmosphere is rich in exotic gases, creating dazzling auroras that dance across the sky, visible even from its numerous, diverse moons.' },
+        { name: 'Nebularis', img: 'images/planet2.png', info: 'Nebularis is a mysterious planet shrouded in dense, colorful nebulae, giving it an ever-shifting, cosmic appearance. Its surface, covered in dark, crystalline minerals, reflects the nebulae\’s light. Currently uninhabited.' },
         { name: 'Stellarion', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
         { name: 'Cat Girl Planet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
         { name: 'Luminara', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },

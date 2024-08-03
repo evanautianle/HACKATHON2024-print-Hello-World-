@@ -1,13 +1,7 @@
 * {
-    font-family:"Arimo";
+    /* border: 1px dotted red; */
+    font-family:"Helvetica", sans-serif;
 }
-
-.arimo-<uniquifier> {
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
 
 body {
     font-family: Arial, sans-serif;
@@ -17,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     user-select: none; /* Prevent text selection across the body */
+    height: 100%;
 }
 
 .container {
@@ -90,6 +85,7 @@ img {
 /* Hamburger Menu Styles */
 .menu-container {
     position: relative;
+    align-items: center;
 }
 
 .hamburger-menu {
@@ -173,5 +169,5 @@ img {
 #logo {
     max-width: 18%;
     border-radius: 300px;
-    padding: 20px;
+    /* padding: 20px; */
 }

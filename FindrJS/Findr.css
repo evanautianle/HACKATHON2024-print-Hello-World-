@@ -80,7 +80,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px; /* Increased padding for more space */
+    padding: 20px; /* Increased padding for more space */
     background-color: #222;
     position: relative;
     min-height: 80px; /* Ensures a taller header */
@@ -195,6 +195,7 @@ img {
 .menu-container {
     display: flex;
     align-items: center;
+    background-color: #333;
 }
 
 .hamburger-menu {
@@ -419,4 +420,27 @@ img {
 .arrow-left i, .arrow-right i {
     pointer-events: none; /* Prevent the icon from blocking the click */
 }
+}
+
+.countdown {
+    background-color: #333; /* Adjust the background color to your preference */
+    padding: 10px;
+    border-radius: 50px; /* Optional: Adds rounded corners */
+    display: flex;
+    justify-content: center; /* Centers the contents horizontally */
+    align-items: center; /* Centers the contents vertically */
+}
+
+.countdown-container {
+    display: flex;
+    align-items: center;
+}
+
+#end-image {
+    height: 30px; /* Adjust the height to make the image smaller */
+    margin-right: 5px; /* Space between the image and the timer */
+}
+
+#timer {
+    font-size: 15px; /* Adjust the font size as needed */
 }

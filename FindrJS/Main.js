@@ -63,14 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const swipeThreshold = 100; // Minimum distance to consider a swipe
 
     const planetData = [
-        { name: 'Celestara', img: 'images/planet0.png', info: 'Celestara is a captivating planet known for its ethereal beauty and serene environment.' },
-        { name: 'Aetherion', img: 'images/planet1.png', info: 'Aetherion has multicolored clouds and a vast ring system composed of shimmering ice crystals.' },
-        { name: 'Nebularis', img: 'images/planet2.png', info: 'Nebularis is a mysterious planet shrouded in dense, colorful nebulae.' },
+        { name: 'Celestara', img: 'images/planet0.png', info: 'Celestara is a captivating planet known for its ethereal beauty and serene environment. It lies within a distant star system, orbited by three moons that create a mesmerizing celestial dance in its night sky.', humidity: '60%', temperature: '18°C', population: '2.2 billion', funFact: 'Known for its serene beauty.' },
+        { name: 'Aetherion', img: 'images/planet1.png', info: 'Aetherion has multicolored clouds and a vast ring system composed of shimmering ice crystals. Its atmosphere is rich in exotic gases, creating dazzling auroras that dance across the sky, visible even from its numerous, diverse moons.', humidity: '70%', temperature: '25°C', population: '17 million', funFact: 'Home to dazzling auroras.' },
+        { name: 'Nebularis', img: 'images/planet2.png', info: 'Nebularis is a mysterious planet shrouded in dense, colorful nebulae, giving it an ever-shifting, cosmic appearance. Its surface, covered in dark, crystalline minerals, reflects the nebulae\’s light. Currently uninhabited.' },
         { name: 'Stellarion', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
-        { name: 'Cat Girl Planet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
-        { name: 'Luminara', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },
+        { name: 'Cat Girl Planet', img: 'images/planet7.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
+        { name: 'Luminara', img: 'images/planet10.png', info: 'Famous for its stunning ring system.' },
         { name: 'Planet Evan', img: 'images/evanplanet.png', info: 'Evan.' },
-        { name: 'Cooked Planet', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
+        { name: 'Gambit', img: 'images/Gambit.png', info: 'Hes him' }
+        { name: 'ChatGpt', img: 'images/Chatgpt.png', info: 'Our saviour' }
+        { name: 'Diddy Planet', img: 'images/Diddy.png', info: 'Named after the american rapper, record producer and record executive, P Diddy' }
+        { name: 'Cooked Planet', img: 'images/Cooked', info: 'Lava planet where viallian arcs begin. Its litterally cooked' }
     ];
     let currentPlanetIndex = 0;
 
@@ -83,7 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('planet-image').src = planet.img;
         document.getElementById('planet-name').textContent = planet.name;
         document.getElementById('planet-info').textContent = planet.info;
+        document.getElementById('planet-humidity').textContent = planet.humidity;
+        document.getElementById('planet-temperature').textContent = planet.temperature;
+        document.getElementById('planet-population').textContent = planet.population;
+        document.getElementById('planet-fun-fact').textContent = planet.funFact;
     }
+    
 
     function handleSwipe(startX, endX) {
         if (endX - startX > swipeThreshold) {

@@ -1,5 +1,6 @@
 /* General Reset */
 * {
+    /* border: 1px dotted red; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -69,19 +70,13 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    /* Set a max-width for better control */
-    margin: 0 auto;
-    padding: 0 15px;
-    /* Add some horizontal padding */
-    background-image: url('path/to/your/background.gif');
-    /* Set the GIF background */
-    background-size: cover;
-    /* Cover the entire container */
-    background-repeat: no-repeat;
-    /* Prevent repeating the image */
-    background-position: center;
-    /* Center the image */
+    max-width: 1200px; /* Set a max-width for better control */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 15px; /* Add some horizontal padding */
+    background-image: url('path/to/your/background.gif'); /* Set the GIF background */
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center; /* Center the image */
 }
 
 h1 {
@@ -94,7 +89,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1% 2%;
     /* Increased padding for more space */
     background-color: #222;
     position: relative;
@@ -122,49 +117,48 @@ h1 {
 }
 
 .header #logo {
-    max-width: 40%;
-    min-width: 40px;
     max-width: 130px;
+    width: 80%;
+    min-width: 40px;
     border-radius: 300px;
 }
 
 .swipe-container {
     position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 40px auto;
-    /* Centered and spaced from the top */
-    padding: 0 20px;
-    /* Add horizontal padding */
-    box-sizing: border-box;
-    /* Include padding in the element's total width and height */
+
+    max-width: 400px;
+    width: 90%;
+    min-width: 300px;
+
+    
+    margin: 40px auto; /* Centered and spaced from the top */
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    text-align: center; /* Ensure child elements are centered */
 }
 
 .planet-card {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-    /* Outer glow */
-    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7));
-    /* Inner glow */
-    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
-    /* Smooth transition effect */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7)); /* Inner glow */
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition effect */
     background-clip: padding-box;
     background-color: #2c2c2c;
     border-radius: 10px;
     padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    /* Ensure padding is included in width */
+    /* min-height: 400px; */
+    /* max-height: 500px; */
+    width: 100%; /* Ensure it takes full width of the container */
+    box-sizing: border-box; /* Include padding in width */
     transition: transform 0.3s ease-out;
-    user-select: none;
-    /* Prevent text selection on the planet card */
+    user-select: none; /* Prevent text selection on the planet card */
+    margin: 0 auto; /* Center the planet card */
+    /* max-width: 500px; Optionally set a max width for better control */
 }
 
 .planet-card img {
     background: #000;
-    width: 100%;
-    /* Scale image to container width */
-    height: auto;
-    /* Maintain aspect ratio */
+    width: 100%; /* Scale image to container width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
@@ -173,6 +167,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin-top: 20px;
+    font-size: 0.8em;
 }
 
 .stat-card {
@@ -180,6 +175,8 @@ h1 {
     border-radius: 5px;
     padding: 10px;
     text-align: left;
+
+    height: auto;
 }
 
 .stat-card h3 {

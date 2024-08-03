@@ -134,3 +134,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial load
     loadPlanet(currentPlanetIndex);
 });
+

@@ -1,12 +1,12 @@
 * {
     /* border: 1px dotted red; */
-    font-family:"Helvetica", sans-serif;
+    font-family:; 'Arimo'
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #2C2C2C;
-    color: #fff;
+    color: hsl(0, 0%, 100%);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -62,6 +62,30 @@ h1 {
 }
 
 .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: #444;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+.stat-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.stats-list {
     margin: 20px 0;
 }
 
@@ -153,7 +177,7 @@ img {
 
 /* Animation for Hamburger Menu */
 .hamburger-menu.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(4px, 10px);
+    transform: rotate(45deg) translate(5px, 6px);
 }
 
 .hamburger-menu.open .bar:nth-child(2) {
@@ -161,7 +185,7 @@ img {
 }
 
 .hamburger-menu.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(4px, -10px);
+    transform: rotate(-45deg) translate(5px, -6px);
 }
 
 #logo {

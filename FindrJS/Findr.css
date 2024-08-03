@@ -80,7 +80,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px; /* Increased padding for more space */
+    padding: 20px; /* Increased padding for more space */
     background-color: #222;
     position: relative;
     min-height: 80px; /* Ensures a taller header */
@@ -122,6 +122,10 @@ h1 {
 }
 
 .planet-card {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7)); /* Inner glow */
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition effect */
+    background-clip: padding-box;
     background-color: #2c2c2c;
     border-radius: 10px;
     padding: 20px;
@@ -191,6 +195,7 @@ img {
 .menu-container {
     display: flex;
     align-items: center;
+    background-color: #333;
 }
 
 .hamburger-menu {
@@ -415,4 +420,38 @@ img {
 .arrow-left i, .arrow-right i {
     pointer-events: none; /* Prevent the icon from blocking the click */
 }
+}
+
+.countdown {
+    background-color: #333; /* Adjust the background color to your preference */
+    padding: 10px;
+    border-radius: 50px; /* Optional: Adds rounded corners */
+    display: flex;
+    justify-content: center; /* Centers the contents horizontally */
+    align-items: center; /* Centers the contents vertically */
+}
+
+.countdown-container {
+    display: flex;
+    align-items: center;
+}
+
+#end-image {
+    height: 30px; /* Adjust the height to make the image smaller */
+    margin-right: 5px; /* Space between the image and the timer */
+}
+
+#timer {
+    font-size: 15px; /* Adjust the font size as needed */
+}
+
+/* Add these styles to your CSS */
+.planet-card.red-border {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7)); /* Inner glow */
+}
+
+.planet-card.green-border {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.7); /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.7)); /* Inner glow */
 }

@@ -54,14 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const planetCard = document.getElementById('planet-card');
     const planetData = [
-        { name: 'Lucasland', img: 'images/planet0.png', info: 'Closest planet to the Sun. It has a very thin atmosphere.' },
-        { name: 'GayPridePlanet', img: 'images/planet1.png', info: 'Known as Earth\'s sister planet due to its similar size and composition.' },
-        { name: 'poopoopeepee', img: 'images/planet2.png', info: 'The only planet known to support life. It has a rich atmosphere and abundant water.' },
-        { name: 'Skibidi', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
-        { name: 'CatGirlPlanet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
-        { name: 'RickandMorty', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },
-        { name: 'lgbtliberationland', img: 'images/planet6.png', info: 'Known for its unique tilt and being an ice giant.' },
-        { name: 'gedagedigadago', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
+        { name: 'Celestara', img: 'images/planet0.png', info: 'Celestara is a captivating planet known for its ethereal beauty and serene environment. It lies within a distant star system, orbited by three moons that create a mesmerizing celestial dance in its night sky.' },
+        { name: 'Aetherion', img: 'images/planet1.png', info: 'Known as Earth\'s sister planet due to its similar size and composition.' },
+        { name: 'Nebularis', img: 'images/planet2.png', info: 'The only planet known to support life. It has a rich atmosphere and abundant water.' },
+        { name: 'Stellarion', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
+        { name: 'Cat Girl Planet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
+        { name: 'Luminara', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },
+        { name: 'Planet Tony', img: 'images/planet6.png', info: 'Known for its unique tilt and being an ice giant.' },
+        { name: 'Cooked Planet', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
     ];
     let currentPlanetIndex = 0;
 

@@ -11,9 +11,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity to your preference */
-    z-index: 998; /* Ensure it is below the menu */
-    pointer-events: none; /* Allow interactions to pass through to underlying elements */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust the opacity to your preference */
+    z-index: 998;
+    /* Ensure it is below the menu */
+    pointer-events: none;
+    /* Allow interactions to pass through to underlying elements */
 }
 
 #darken-overlay {
@@ -22,14 +25,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
     visibility: hidden;
     z-index: 998;
 }
 
 #darken-overlay.darken {
     display: block;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity to your preference */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust the opacity to your preference */
     visibility: visible;
     font-family: "Arimo";
 }
@@ -48,14 +53,18 @@
 body {
     font-family: 'Arimo', Arial, sans-serif;
     background-color: #34343b;
-    background-size: cover; /* Cover the entire body */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-position: center; /* Center the image */
+    background-size: cover;
+    /* Cover the entire body */
+    background-repeat: no-repeat;
+    /* Prevent repeating the image */
+    background-position: center;
+    /* Center the image */
     color: hsl(0, 0%, 100%);
     text-align: center;
     margin: 0;
     padding: 0;
-    user-select: none; /* Prevent text selection across the body */
+    user-select: none;
+    /* Prevent text selection across the body */
     height: 100%;
 }
 
@@ -63,11 +72,16 @@ body {
     max-width: 1200px;
     /* Set a max-width for better control */
     margin: 0 auto;
-    padding: 0 15px; /* Add some horizontal padding */
-    background-image: url('path/to/your/background.gif'); /* Set the GIF background */
-    background-size: cover; /* Cover the entire container */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-position: center; /* Center the image */
+    padding: 0 15px;
+    /* Add some horizontal padding */
+    background-image: url('path/to/your/background.gif');
+    /* Set the GIF background */
+    background-size: cover;
+    /* Cover the entire container */
+    background-repeat: no-repeat;
+    /* Prevent repeating the image */
+    background-position: center;
+    /* Center the image */
 }
 
 h1 {
@@ -80,15 +94,18 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px; /* Increased padding for more space */
+    padding: 20px;
+    /* Increased padding for more space */
     background-color: #222;
     position: relative;
-    min-height: 80px; /* Ensures a taller header */
+    min-height: 80px;
+    /* Ensures a taller header */
 }
 
 .header .countdown {
     margin: 0;
-    margin-right: 40px; /* Increased margin to move countdown more to the left */
+    margin-right: 40px;
+    /* Increased margin to move countdown more to the left */
 }
 
 .header #timer {
@@ -106,6 +123,8 @@ h1 {
 
 .header #logo {
     max-width: 40%;
+    min-width: 40px;
+    max-width: 130px;
     border-radius: 300px;
 }
 
@@ -122,9 +141,12 @@ h1 {
 }
 
 .planet-card {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Outer glow */
-    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7)); /* Inner glow */
-    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition effect */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7));
+    /* Inner glow */
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    /* Smooth transition effect */
     background-clip: padding-box;
     background-color: #2c2c2c;
     border-radius: 10px;
@@ -139,8 +161,10 @@ h1 {
 
 .planet-card img {
     background: #000;
-    width: 100%; /* Scale image to container width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    /* Scale image to container width */
+    height: auto;
+    /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
@@ -279,7 +303,8 @@ img {
 }
 
 .menu a:hover {
-    color: #f39c12; /* Change to your preferred hover color */
+    color: #f39c12;
+    /* Change to your preferred hover color */
     transform: scale(1.05);
 }
 
@@ -297,9 +322,12 @@ img {
 }
 
 .stat-card .stat-icon {
-    font-size: 2em; /* Adjust size for better alignment */
-    margin-right: 10px; /* Space between the icon and text */
-    color: #fff; /* Icon color */
+    font-size: 2em;
+    /* Adjust size for better alignment */
+    margin-right: 10px;
+    /* Space between the icon and text */
+    color: #fff;
+    /* Icon color */
 }
 
 
@@ -366,69 +394,90 @@ img {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .leaderboard-entry .planet-name {
         margin-bottom: 5px;
     }
-/* Define the horizontal bounce animation */
-@keyframes horizontal-bounce {
-    0%, 100% {
-        transform: translateX(0);
+
+    /* Define the horizontal bounce animation */
+    @keyframes horizontal-bounce {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(10px);
+            /* Adjust the value for more or less movement */
+        }
     }
-    50% {
-        transform: translateX(10px); /* Adjust the value for more or less movement */
+
+    /* Style for arrows */
+    .arrow {
+        position: fixed;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Background color for the arrow */
+        color: #fff;
+        /* Arrow icon color */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+        /* Ensure it's above other elements */
+        font-size: 1.5em;
+        /* Size of the arrow icon */
+        transition: opacity 0.3s ease;
+        animation: horizontal-bounce 1s ease-in-out infinite;
+        /* Apply the horizontal bounce animation */
+        opacity: 1;
     }
-}
 
-/* Style for arrows */
-.arrow {
-    position: fixed;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.7); /* Background color for the arrow */
-    color: #fff; /* Arrow icon color */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1000; /* Ensure it's above other elements */
-    font-size: 1.5em; /* Size of the arrow icon */
-    transition: opacity 0.3s ease;
-    animation: horizontal-bounce 1s ease-in-out infinite; /* Apply the horizontal bounce animation */
-    opacity: 1;
-}
+    /* Style specific to the left arrow */
+    .arrow-left {
+        left: 5px;
+        animation-delay: 0s;
+        /* Animation starts immediately */
+    }
 
-/* Style specific to the left arrow */
-.arrow-left {
-    left: 5px; 
-    animation-delay: 0s; /* Animation starts immediately */
-}
+    /* Style specific to the right arrow */
+    .arrow-right {
+        right: 15px;
+        animation-delay: 0.5s;
+        /* Start the animation with a delay to create out-of-sync effect */
+    }
 
-/* Style specific to the right arrow */
-.arrow-right {
-    right: 15px; 
-    animation-delay: 0.5s; /* Start the animation with a delay to create out-of-sync effect */
-}
+    /* Hidden state for fade-out effect */
+    .arrow.fade-out {
+        opacity: 0;
+        /* Hide the arrow */
+        transition: opacity 0.5s ease;
+        /* Ensure smooth fading */
+    }
 
-/* Hidden state for fade-out effect */
-.arrow.fade-out {
-    opacity: 0; /* Hide the arrow */
-    transition: opacity 0.5s ease; /* Ensure smooth fading */
-}
-
-.arrow-left i, .arrow-right i {
-    pointer-events: none; /* Prevent the icon from blocking the click */
-}
+    .arrow-left i,
+    .arrow-right i {
+        pointer-events: none;
+        /* Prevent the icon from blocking the click */
+    }
 }
 
 .countdown {
-    background-color: #333; /* Adjust the background color to your preference */
+    background-color: #333;
+    /* Adjust the background color to your preference */
     padding: 10px;
-    border-radius: 50px; /* Optional: Adds rounded corners */
+    border-radius: 50px;
+    /* Optional: Adds rounded corners */
     display: flex;
-    justify-content: center; /* Centers the contents horizontally */
-    align-items: center; /* Centers the contents vertically */
+    justify-content: center;
+    /* Centers the contents horizontally */
+    align-items: center;
+    /* Centers the contents vertically */
 }
 
 .countdown-container {
@@ -437,21 +486,28 @@ img {
 }
 
 #end-image {
-    height: 30px; /* Adjust the height to make the image smaller */
-    margin-right: 5px; /* Space between the image and the timer */
+    height: 30px;
+    /* Adjust the height to make the image smaller */
+    margin-right: 5px;
+    /* Space between the image and the timer */
 }
 
 #timer {
-    font-size: 15px; /* Adjust the font size as needed */
+    font-size: 15px;
+    /* Adjust the font size as needed */
 }
 
 /* Add these styles to your CSS */
 .planet-card.red-border {
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Outer glow */
-    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7)); /* Inner glow */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7));
+    /* Inner glow */
 }
 
 .planet-card.green-border {
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.7); /* Outer glow */
-    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.7)); /* Inner glow */
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.7);
+    /* Outer glow */
+    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.7));
+    /* Inner glow */
 }

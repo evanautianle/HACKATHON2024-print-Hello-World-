@@ -1,17 +1,17 @@
 export const timerTest = () => {
-    console.log('export import working')
-}
+    console.log('export import working');
+};
 
 // Calculate the target time
 const countdownElement = document.getElementById('timer');
-    
+
 function calculateTargetTime() {
     const now = new Date();
     const currentDay = now.getDay();
     const daysUntilSunday = (7 - currentDay) % 7; // Days until the next Sunday
     const targetSunday = new Date(now);
     targetSunday.setDate(now.getDate() + daysUntilSunday);
-    targetSunday.setHours(17, 0, 0, 0); // Set to 5 PM NZT
+    targetSunday.setHours(19, 0, 0, 0); // Set to 7 pm (or whatever time you want)
 
     const targetTime = new Date(targetSunday.getTime() + 2 * 24 * 60 * 60 * 1000); // Add 2 days
 
@@ -25,7 +25,8 @@ export function updateCountdown() {
     const now = new Date();
     const timeRemaining = targetTime - now;
 
-    if (timeRemaining <= 0) {
+    if (timeRemaining < 172801000) {
+        console.log('boom')
         countdownElement.textContent = '00:00:00';
         clearInterval(countdownInterval);
         return;

@@ -5,9 +5,12 @@ export class PlanetSwipe {
         this.arrowLeft = arrowLeftElement;
         this.startX = 0;
         this.isSwiping = false;
-        this.swipeThreshold = 100; // Minimum distance to consider a swipe
-        this.hasSwiped = false; // Flag to track if a swipe has occurred
+        this.swipeThreshold = 100;
+        this.hasSwiped = false;
         this.currentPlanetIndex = 0;
+
+        // Initialize local storage array
+        this.savedPlanets = JSON.parse(localStorage.getItem('savedPlanets')) || [];
 
         this.planetData = [
             { 
@@ -115,7 +118,15 @@ export class PlanetSwipe {
     }
 
     init() {
+        // Set initial position off the bottom
+        this.planetCard.style.transform = "translateY(100%)";
+        this.planetCard.style.transition = "none"; // Disable transition initially
         this.loadPlanet(this.currentPlanetIndex);
+        setTimeout(() => {
+            // Ensure the initial card slides up into view with ease-out transition
+            this.planetCard.style.transition = "transform 0.6s ease-out";
+            this.planetCard.style.transform = "translateY(0)";
+        }, 10); // Slight delay to ensure the transform is applied
         this.attachEventListeners();
     }
 
@@ -136,75 +147,88 @@ export class PlanetSwipe {
 
     handleSwipe(startX, endX) {
         if (endX - startX > this.swipeThreshold) {
-            this.swipe("right"); // Swipe right
+            this.swipe("right");
         } else if (startX - endX > this.swipeThreshold) {
-            this.swipe("left"); // Swipe left
-        }
-
-        if (!this.hasSwiped) {
-            this.hasSwiped = true; // Set flag to true
+            this.swipe("left");
         }
     }
 
     swipe(direction) {
         const offset = direction === "left" ? "-100%" : "100%";
-        const borderClass = direction === "left" ? "red-border" : "green-border";
-
+        const tilt = direction === "left" ? "-10deg" : "10deg";
+        
         // Add border class based on swipe direction
-        this.planetCard.classList.add(borderClass);
-
-        this.planetCard.style.transform = `translateX(${offset})`;
-        this.planetCard.style.boxShadow = direction === "left" ? "0 0 20px rgba(255, 0, 0, 0.5)" : "0 0 20px rgba(0, 255, 0, 0.5)"; // Red or green glow
-
+        this.planetCard.classList.add(direction === "left" ? "red-border" : "green-border");
+    
+        // Smooth transition for swipe out with ease-out
+        this.planetCard.style.transition = "transform 0.4s ease-out, opacity 0.4s ease-out, box-shadow 0.4s ease-out";
+        this.planetCard.style.transform = `translateY(100%) rotate(${tilt})`;
+        this.planetCard.style.opacity = 0;
+        
         setTimeout(() => {
-            this.planetCard.style.transition = "none";
-            this.planetCard.style.transform = "translateX(0)";
-            this.planetCard.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.3)"; // Default shadow
-            this.planetCard.style.transition = "transform 0.3s ease-out";
-
-            // Remove border class after swipe
-            this.planetCard.classList.remove("red-border", "green-border");
-
+            // Update the planet index and load the new planet
             if (direction === "left") {
                 this.deletePlanet();
+                this.currentPlanetIndex = (this.currentPlanetIndex + 1) % this.planetData.length;
             } else if (direction === "right") {
                 this.savePlanet();
+                this.currentPlanetIndex = (this.currentPlanetIndex - 1 + this.planetData.length) % this.planetData.length;
             }
-            this.currentPlanetIndex =
-                direction === "left"
-                    ? (this.currentPlanetIndex + 1) % this.planetData.length
-                    : (this.currentPlanetIndex - 1 + this.planetData.length) % this.planetData.length;
             this.loadPlanet(this.currentPlanetIndex);
-        }, 300);
-    }
+        
+            // Reset styles after animation
+            this.planetCard.style.transition = "none"; // Disable transition for reset
+            this.planetCard.style.transform = "translateY(100%)";
+            this.planetCard.style.opacity = 0;
+            this.planetCard.style.boxShadow = "none"; // Remove box shadow after swipe
+            
+            // Slide up the new planet card with ease-out transition
+            setTimeout(() => {
+                this.planetCard.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
+                this.planetCard.style.transform = "translateY(0)";
+                this.planetCard.style.opacity = 1;
+                this.planetCard.classList.remove("red-border", "green-border");
+                this.planetCard.style.boxShadow = "none"; // Ensure box shadow is removed after swipe
+            }, 50); // Slight delay for reset transition
+        }, 400); // Adjust delay to match transition duration
+    }    
+    
 
     snapToPosition(finalX) {
         const swipeDistance = finalX - this.startX;
-
-        if (Math.abs(swipeDistance) > this.swipeThreshold) {
-            this.planetCard.style.transform = `translateX(${
-                swipeDistance > 0 ? "100%" : "-100%"
-            })`;
+        const isEdge = Math.abs(swipeDistance) > this.swipeThreshold;
+    
+        if (isEdge) {
+            this.planetCard.style.transition = "transform 0.4s ease-out, opacity 0.4s ease-out, box-shadow 0.4s ease-out";
+            this.planetCard.style.transform = `translateX(${swipeDistance > 0 ? "120%" : "-120%"}) rotate(${swipeDistance > 0 ? "10deg" : "-10deg"})`;
+            this.planetCard.style.opacity = 0;
+            this.planetCard.style.boxShadow = swipeDistance > 0 
+                ? "0 0 20px rgba(0, 255, 0, 0.5)" 
+                : "0 0 20px rgba(255, 0, 0, 0.5)";
         } else {
-            this.planetCard.style.transform = "translateX(0)";
+            this.planetCard.style.transition = "transform 0.4s ease-out, opacity 0.4s ease-out, box-shadow 0.4s ease-out";
+            this.planetCard.style.transform = "translateX(0) rotate(0)";
+            this.planetCard.style.opacity = 1;
+            this.planetCard.style.boxShadow = "none"; // Remove box shadow if swipe is not completed
         }
-
-        // Reset opacity and glow color after snap
-        this.planetCard.style.opacity = 1;
-        this.planetCard.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.5)"; // White glow
-    }
+    }    
 
     handleDrag(e) {
         const currentX = e.clientX || e.touches[0].clientX;
         const distance = currentX - this.startX;
-
-        this.planetCard.style.transform = `translateX(${distance}px)`;
+    
+        // Calculate rotation based on distance with a maximum tilt angle
+        const maxTilt = 10;
+        const tilt = Math.min(maxTilt, Math.max(-maxTilt, (distance / window.innerWidth) * maxTilt));
+    
+        this.planetCard.style.transition = "none";
+        this.planetCard.style.transform = `translateX(${distance}px) rotate(${tilt}deg)`;
         this.planetCard.style.opacity = Math.max(0.5, 1 - Math.abs(distance) / window.innerWidth);
-
+    
         // Change box shadow based on drag direction
         this.planetCard.style.boxShadow = distance > 0 
-            ? "0 0 20px rgba(0, 255, 0, 0.5)" // Green glow for right
-            : "0 0 20px rgba(255, 0, 0, 0.5)"; // Red glow for left
+            ? "0 0 20px rgba(0, 255, 0, 0.5)" 
+            : "0 0 20px rgba(255, 0, 0, 0.5)";
     }
 
     attachEventListeners() {
@@ -212,7 +236,7 @@ export class PlanetSwipe {
         this.planetCard.addEventListener("mousedown", (e) => {
             this.startX = e.clientX;
             this.isSwiping = true;
-            this.planetCard.style.transition = "none"; // Disable transition during drag
+            this.planetCard.style.transition = "none";
         });
 
         document.addEventListener("mousemove", (e) => {
@@ -225,7 +249,6 @@ export class PlanetSwipe {
             if (this.isSwiping) {
                 this.isSwiping = false;
                 this.handleSwipe(this.startX, e.clientX);
-                this.planetCard.style.transition = "transform 0.3s ease-out"; // Re-enable transition
                 this.snapToPosition(e.clientX);
             }
         });
@@ -234,7 +257,7 @@ export class PlanetSwipe {
         this.planetCard.addEventListener("touchstart", (e) => {
             this.startX = e.touches[0].clientX;
             this.isSwiping = true;
-            this.planetCard.style.transition = "none"; // Disable transition during drag
+            this.planetCard.style.transition = "none";
         });
 
         this.planetCard.addEventListener("touchmove", (e) => {
@@ -247,7 +270,6 @@ export class PlanetSwipe {
             if (this.isSwiping) {
                 this.isSwiping = false;
                 this.handleSwipe(this.startX, e.changedTouches[0].clientX);
-                this.planetCard.style.transition = "transform 0.3s ease-out"; // Re-enable transition
                 this.snapToPosition(e.changedTouches[0].clientX);
             }
         });
@@ -258,6 +280,9 @@ export class PlanetSwipe {
     }
 
     savePlanet() {
-        console.log("Planet saved");
+        const planet = this.planetData[this.currentPlanetIndex];
+        this.savedPlanets.push(planet);
+        localStorage.setItem('savedPlanets', JSON.stringify(this.savedPlanets));
+        console.log("Planet saved:", planet);
     }
 }

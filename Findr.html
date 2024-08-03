@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findr - Swipe on Planets</title>
+    <title>Findr</title>
     <link rel="stylesheet" href="FindrCss/Findr.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +36,7 @@
             <nav class="menu" id="menu">
                 <ul>
                     <li><a href="Findr.html">Home</a></li>
+                    <li><a href="SavedPlanets.html">Saved Planets</a></li>
                     <li><a href="friendlist.html">Friends</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="Leaderboard.html">Planet Ranks</a></li>
@@ -44,6 +45,11 @@
         </div>
     </header>
     <div class="container">
+        <!-- <div class="top-text">
+            <div><< Dismiss</div>
+            <div>Swipe</div>
+            <div>Save >></div>
+        </div> -->
         <div class="swipe-container">
             <div id="planet-card" class="planet-card">
                 <img id="planet-image" src="PlanetImages/planet4.png" alt="Current planet image">
@@ -77,7 +83,6 @@
             <i class="fas fa-chevron-left"></i>
         </div>
         <div class="arrow-container arrow-right-container">
-            <div class="arrow-text">Swipe right to add to favourites</div>
             <div class="arrow arrow-right" id="arrow-right">
                 <i class="fas fa-chevron-right"></i>
             </div>

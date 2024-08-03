@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const planetCard = document.getElementById('planet-card');
     const planetData = [
-        { name: 'Celestara', img: 'images/planet0.png', info: 'Celestara is a captivating planet known for its ethereal beauty and serene environment. It lies within a distant star system, orbited by three moons that create a mesmerizing celestial dance in its night sky.' },
-        { name: 'Aetherion', img: 'images/planet1.png', info: 'Aetherion has multicolored clouds and a vast ring system composed of shimmering ice crystals. Its atmosphere is rich in exotic gases, creating dazzling auroras that dance across the sky, visible even from its numerous, diverse moons.' },
+        { name: 'Celestara', img: 'images/planet0.png', info: 'Celestara is a captivating planet known for its ethereal beauty and serene environment. It lies within a distant star system, orbited by three moons that create a mesmerizing celestial dance in its night sky.', humidity: '60%', temperature: '18°C', population: '2.2 billion', funFact: 'Known for its serene beauty.' },
+        { name: 'Aetherion', img: 'images/planet1.png', info: 'Aetherion has multicolored clouds and a vast ring system composed of shimmering ice crystals. Its atmosphere is rich in exotic gases, creating dazzling auroras that dance across the sky, visible even from its numerous, diverse moons.', humidity: '70%', temperature: '25°C', population: '17 million', funFact: 'Home to dazzling auroras.' },
         { name: 'Nebularis', img: 'images/planet2.png', info: 'Nebularis is a mysterious planet shrouded in dense, colorful nebulae, giving it an ever-shifting, cosmic appearance. Its surface, covered in dark, crystalline minerals, reflects the nebulae\’s light. Currently uninhabited.' },
         { name: 'Stellarion', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
         { name: 'Cat Girl Planet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
@@ -70,7 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('planet-image').src = planet.img;
         document.getElementById('planet-name').textContent = planet.name;
         document.getElementById('planet-info').textContent = planet.info;
+        document.getElementById('planet-humidity').textContent = planet.humidity;
+        document.getElementById('planet-temperature').textContent = planet.temperature;
+        document.getElementById('planet-population').textContent = planet.population;
+        document.getElementById('planet-fun-fact').textContent = planet.funFact;
     }
+    
 
     function handleSwipe(startX, endX) {
         if (endX - startX > swipeThreshold) {
@@ -135,5 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial load
     loadPlanet(currentPlanetIndex);
+
 });
 

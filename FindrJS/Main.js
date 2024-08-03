@@ -52,14 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const planetCard = document.getElementById('planet-card');
     const planetData = [
-        { name: 'Mercury', img: 'images/mercury.png', info: 'Closest planet to the Sun. It has a very thin atmosphere.' },
-        { name: 'Venus', img: 'images/venus.png', info: 'Known as Earth\'s sister planet due to its similar size and composition.' },
-        { name: 'Earth', img: 'images/earth.png', info: 'The only planet known to support life. It has a rich atmosphere and abundant water.' },
-        { name: 'Mars', img: 'images/mars.png', info: 'Often called the Red Planet due to its reddish appearance.' },
-        { name: 'Jupiter', img: 'images/jupiter.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
-        { name: 'Saturn', img: 'images/saturn.png', info: 'Famous for its stunning ring system.' },
-        { name: 'Uranus', img: 'images/uranus.png', info: 'Known for its unique tilt and being an ice giant.' },
-        { name: 'Neptune', img: 'images/neptune.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
+        { name: 'Lucasland', img: 'images/planet0.png', info: 'Closest planet to the Sun. It has a very thin atmosphere.' },
+        { name: 'GayPridePlanet', img: 'images/planet1.png', info: 'Known as Earth\'s sister planet due to its similar size and composition.' },
+        { name: 'poopoopeepee', img: 'images/planet2.png', info: 'The only planet known to support life. It has a rich atmosphere and abundant water.' },
+        { name: 'Skibidi', img: 'images/planet3.png', info: 'Often called the Red Planet due to its reddish appearance.' },
+        { name: 'CatGirlPlanet', img: 'images/planet4.png', info: 'The largest planet in our solar system. Known for its Great Red Spot.' },
+        { name: 'RickandMorty', img: 'images/planet5.png', info: 'Famous for its stunning ring system.' },
+        { name: 'lgbtliberationland', img: 'images/planet6.png', info: 'Known for its unique tilt and being an ice giant.' },
+        { name: 'gedagedigadago', img: 'images/planet7.png', info: 'The farthest planet from the Sun. Known for its deep blue color.' }
     ];
     let currentPlanetIndex = 0;
 

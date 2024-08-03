@@ -46,7 +46,7 @@ h1 {
 }
 
 .planet-card {
-    background: #222;
+    background: #333;
     border-radius: 10px;
     padding: 20px;
     width: 100%;
@@ -110,7 +110,6 @@ img {
 }
 
 .menu {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -123,7 +122,6 @@ img {
 }
 
 .menu.show {
-    display: block;
     transform: translateX(0);
 }
 
@@ -170,4 +168,5 @@ img {
     max-width: 18%;
     border-radius: 300px;
     /* padding: 20px; */
+    margin: 20px;
 }

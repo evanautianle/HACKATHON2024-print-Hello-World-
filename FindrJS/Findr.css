@@ -36,7 +36,10 @@
 
 body {
     font-family: 'Arimo', Arial, sans-serif;
-    background-color: #2C2C2C;
+    background-image: url('images/background.gif'); /* Set the GIF background */
+    background-size: cover; /* Cover the entire body */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center; /* Center the image */
     color: hsl(0, 0%, 100%);
     text-align: center;
     margin: 0;
@@ -49,6 +52,10 @@ body {
     max-width: 1200px; /* Set a max-width for better control */
     margin: 0 auto;
     padding: 0 15px; /* Add some horizontal padding */
+    background-image: url('path/to/your/background.gif'); /* Set the GIF background */
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center; /* Center the image */
 }
 
 h1 {
@@ -100,7 +107,7 @@ h1 {
 }
 
 .planet-card {
-    background: #333;
+    background-color: rgba(51, 51, 51, 0.9); /* Adjust the opacity here (0.0 to 1.0) */
     border-radius: 10px;
     padding: 20px;
     width: 100%;
@@ -108,6 +115,7 @@ h1 {
     transition: transform 0.3s ease-out;
     user-select: none; /* Prevent text selection on the planet card */
 }
+
 
 .planet-card img {
     width: 100%; /* Scale image to container width */

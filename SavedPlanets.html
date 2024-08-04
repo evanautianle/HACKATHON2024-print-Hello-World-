@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findr</title>
+    <title>Findr - Saved Planets</title>
     <link rel="stylesheet" href="FindrCss/Findr.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,11 +42,22 @@
             </nav>
         </div>
     </header>
+    
     <div class="container">
-
+        <h2 class="saved-planets-header">Saved Planets:</h2>
+        <section class="planet-grid" id="planet-grid">
+            <!-- Planet cards will be inserted here dynamically -->
+        </section>
     </div>
+    
+    <footer>
+        <p>&copy; 2024 findr. All rights reserved.</p>
+        <a href="contact.html">Contact Us</a>
+        <a href="https://twitter.com/spaceexplorer">Twitter</a>
+    </footer>
+    
     <div id="darken-overlay"></div>
-    <script type="module" src="FindrJS/Main.js"></script>
+    <script src="FindrJS/SavedPlanets.js"></script>
 </body>
 
 </html>

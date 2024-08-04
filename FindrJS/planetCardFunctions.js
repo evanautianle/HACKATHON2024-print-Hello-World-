@@ -164,34 +164,53 @@ export class PlanetSwipe {
         this.planetCard.style.transition = "transform 0.4s ease-out, opacity 0.4s ease-out, box-shadow 0.4s ease-out";
         this.planetCard.style.transform = `translateY(100%) rotate(${tilt})`;
         this.planetCard.style.opacity = 0;
-        
+    
         setTimeout(() => {
-            // Update the planet index and load the new planet
-            if (direction === "left") {
-                this.deletePlanet();
-                this.currentPlanetIndex = (this.currentPlanetIndex + 1) % this.planetData.length;
-            } else if (direction === "right") {
-                this.savePlanet();
-                this.currentPlanetIndex = (this.currentPlanetIndex - 1 + this.planetData.length) % this.planetData.length;
+            // Check if there are planets left
+            if (this.planetData.length > 0) {
+                if (direction === "left") {
+                    // Remove the planet from the data array
+                    this.planetData.splice(this.currentPlanetIndex, 1);
+                    this.currentPlanetIndex = Math.min(this.currentPlanetIndex, this.planetData.length - 1); // Adjust index
+                    
+                    // Load the new planet or handle if no more planets are left
+                    if (this.planetData.length > 0) {
+                        this.loadPlanet(this.currentPlanetIndex);
+                    } else {
+                        console.warn("No more planets available.");
+                        this.planetCard.style.transform = "translateY(100%)";
+                        this.planetCard.style.opacity = 0;
+                        return;
+                    }
+                } else if (direction === "right") {
+                    // Save the planet to the list
+                    this.savePlanet();
+                    this.currentPlanetIndex = (this.currentPlanetIndex + 1) % this.planetData.length; // Move to next planet
+                    this.loadPlanet(this.currentPlanetIndex);
+                }
+    
+                // Update local storage if necessary
+                localStorage.setItem('savedPlanets', JSON.stringify(this.savedPlanets));
+    
+                // Reset styles after animation
+                this.planetCard.style.transition = "none"; // Disable transition for reset
+                this.planetCard.style.transform = "translateY(100%)";
+                this.planetCard.style.opacity = 0;
+                this.planetCard.style.boxShadow = "none"; // Remove box shadow after swipe
+    
+                // Slide up the new planet card with ease-out transition
+                setTimeout(() => {
+                    this.planetCard.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
+                    this.planetCard.style.transform = "translateY(0)";
+                    this.planetCard.style.opacity = 1;
+                    this.planetCard.classList.remove("red-border", "green-border");
+                    this.planetCard.style.boxShadow = "none"; // Ensure box shadow is removed after swipe
+                }, 50); // Slight delay for reset transition
             }
-            this.loadPlanet(this.currentPlanetIndex);
-        
-            // Reset styles after animation
-            this.planetCard.style.transition = "none"; // Disable transition for reset
-            this.planetCard.style.transform = "translateY(100%)";
-            this.planetCard.style.opacity = 0;
-            this.planetCard.style.boxShadow = "none"; // Remove box shadow after swipe
-            
-            // Slide up the new planet card with ease-out transition
-            setTimeout(() => {
-                this.planetCard.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
-                this.planetCard.style.transform = "translateY(0)";
-                this.planetCard.style.opacity = 1;
-                this.planetCard.classList.remove("red-border", "green-border");
-                this.planetCard.style.boxShadow = "none"; // Ensure box shadow is removed after swipe
-            }, 50); // Slight delay for reset transition
         }, 400); // Adjust delay to match transition duration
     }
+    
+    
 
     snapToPosition(finalX) {
         const swipeDistance = finalX - this.startX;

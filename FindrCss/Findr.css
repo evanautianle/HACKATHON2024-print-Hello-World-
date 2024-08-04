@@ -100,6 +100,21 @@ body {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.saved-container {
+    max-width: 1200px; /* Set a max-width for better control */
+    margin: 0 auto; /* Center the container horizontally */
+    padding-top: 130px; /* Add some top padding */
+    background-image: url('path/to/your/background.gif'); /* Set the GIF background */
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center; /* Center the image */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 1000px; /* Set a maximum height for the container */
+}
+
+
 footer {
     padding-top: 10px; /* Moves the text down by 10 pixels */
     /* Alternatively, you can use margin-top instead of padding-top */

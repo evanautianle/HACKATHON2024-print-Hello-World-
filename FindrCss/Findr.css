@@ -826,17 +826,14 @@ img {
     width: 100%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0;
-    /* Remove default margins */
-    padding: 0;
-    /* Remove default padding */
+    margin: 0; /* Remove default margins */
 }
 
 .popup-topbar {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     gap: 10px;
-    margin-top: 38em;
+    margin-top: 28em;
     margin-bottom: 10px;
 }
 

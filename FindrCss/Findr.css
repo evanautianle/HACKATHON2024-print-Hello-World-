@@ -101,17 +101,31 @@ body {
 }
 
 .saved-container {
-    max-width: 1200px; /* Set a max-width for better control */
-    margin: 0 auto; /* Center the container horizontally */
-    padding-top: 130px; /* Add some top padding */
-    background-image: url('path/to/your/background.gif'); /* Set the GIF background */
-    background-size: cover; /* Cover the entire container */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-position: center; /* Center the image */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-width: 1200px;
+    margin: 150px auto 0; /* Adjust the top margin to move the container down */
+    background-image: url('path/to/your/background.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: auto;
     padding: 20px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-    max-height: 1000px; /* Set a maximum height for the container */
+    max-height: 1000px;
+}
+
+.saved-planets-header {
+    /* Add your styles here */
+    font-size: 24px; /* Example size */
+    font-weight: bold; /* Example weight */
+    color: #ffffff; /* Example color */
+    margin-bottom: 50px; /* Space below the header */
+    padding: 15px 10px 15px 10px;
+    text-align: center; /* Center-align the text */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7));
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    border-radius: 60px;
+    background-color: #222;
 }
 
 

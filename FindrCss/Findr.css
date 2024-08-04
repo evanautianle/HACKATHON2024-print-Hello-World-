@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     overflow: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 body, html {
@@ -133,7 +135,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 2%;
+    padding: 20px;
     background-color: #222;
     min-height: 80px;
     width: 100%; /* Ensure it spans the full width of the viewport */
@@ -257,7 +259,6 @@ img {
 .menu-container {
     display: flex;
     align-items: center;
-    background-color: #333;
 }
 
 .hamburger-menu {
@@ -281,71 +282,41 @@ img {
     transition: 0.3s;
 }
 
-/* Updated menu styles to slide up from the bottom */
+/* Menu styles to slide out from the right */
 .menu {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 300px; /* Adjust height as needed */
+    top: 0;
+    right: -300px; /* Initially off-screen */
+    width: 300px;
+    height: 100%;
     background-color: #222;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+    transition: right 0.3s ease-in-out;
     z-index: 400;
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    overflow-y: auto;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 1.5rem;
 }
+
 
 .menu.show {
-    transform: translateY(0);
+    right: 0; /* Slide-in position */
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu li {
-    margin: 20px 0;
-}
-
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    transition: color 0.3s, transform 0.3s;
-    position: relative;
-    display: inline-block;
-    padding: 10px 0;
-}
-
-.menu a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
+#darken-overlay {
+    position: fixed;
+    top: 0;
     left: 0;
-    background-color: #f39c12;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
+    z-index: 998;
 }
 
-.menu a:hover::before {
+#darken-overlay.darken {
     visibility: visible;
-    transform: scaleX(1);
-}
-
-.menu a:hover {
-    color: #f39c12;
-    /* Change to your preferred hover color */
-    transform: scale(1.05);
 }
 
 /* Animation for Hamburger Menu */

@@ -151,7 +151,26 @@
         educationStatus: 'High education quality',
         survivalRate: '85%' // Advanced conditions suitable for life
     },
-    { 
+    {
+    name: 'Freak Planet', 
+    img: 'PlanetImages/Freaky.png', 
+    info: 'Freak Planet is a freaky world characterized by its freaky weather patterns and freaky geological formations. It orbits a freaky star system, resulting in freaky light shows and freaky landscapes.', 
+    humidity: ’69%’, 
+    temperature: ‘69°C', 
+    population: ’69 million', 
+    funFact: 'I went there and everyone knew you.’, 
+    phone: '+6 969 696 9696’,
+    email: 'contact@freakplanet.com',
+    currencyRatio: 6.8, // 1 USD = 6.9 Freakian Units
+    medianIncome: ‘6.9,000 Freakian Units',
+    terrain: 'Color-shifting deserts and luminescent caverns',
+    rating: 6.9,
+    civilizationStatus: 'Primitive',
+    internationalLanguages: ['Freakian', 'Basic Galactic'],
+    educationStatus: 'freaky educational facilities',
+    survivalRate: '40%' // freaky environment, survival challenging without specialized equipment
+    },
+    {
         name: 'ChatGpt', 
         img: 'PlanetImages/Chatgpt.png', 
         info: 'Our saviour', 

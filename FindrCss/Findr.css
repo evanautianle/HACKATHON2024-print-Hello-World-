@@ -192,6 +192,7 @@ h1 {
     padding: 20px;
     font-size: 0.9em;
     width: 100%;
+    max-width: 85%;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
     user-select: none;

@@ -11,6 +11,9 @@
 
 body, html {
     overflow: hidden; /* Prevent page scrolling */
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 /* Landscape mode */
@@ -753,6 +756,8 @@ img {
     transform: translate(-50%, -50%);
     overflow-y: auto;
     border-radius: 10px;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
 }
 
 .popup-content {
@@ -762,6 +767,9 @@ img {
     position: relative;
     width: 100%;
     height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
 }
 
 .popup-topbar {

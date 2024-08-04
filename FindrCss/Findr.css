@@ -29,6 +29,7 @@ body, html {
     /* Ensure it is below the menu */
     pointer-events: none;
     /* Allow interactions to pass through to underlying elements */
+    transition: background 0.3s ease-in;
 }
 
 #darken-overlay {
@@ -84,7 +85,7 @@ body {
 .container {
     max-width: 1200px; /* Set a max-width for better control */
     margin: 0 auto; /* Center the container horizontally */
-    padding: 0 15px; /* Add some horizontal padding */
+    padding-top: 130px; /* Add some horizontal padding */
     background-image: url('path/to/your/background.gif'); /* Set the GIF background */
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Prevent repeating the image */
@@ -96,9 +97,38 @@ h1 {
     font-size: 2.5em;
 }
 
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    box-shadow: 0 -2px 5px rfgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-link {
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    flex: 1;
+}
+
+.nav-link i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.nav-link span {
+    font-size: 12px;
+}
+
 .header {
     position: fixed; /* Fixed positioning to keep the header at the bottom */
-    bottom: 0; /* Position it at the bottom of the viewport */
+    top: 0; /* Position it at the bottom of the viewport */
     left: 0; /* Ensure it starts from the left edge */
     display: flex;
     justify-content: space-between;
@@ -137,37 +167,33 @@ h1 {
 }
 
 .swipe-container {
-    position: relative;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 400px;
     width: 86%;
     min-width: 300px;
-
-    height: 100vh;
-
-    margin: 5% auto; /* Centered and spaced from the top */
-    padding: 0 20px; /* Add horizontal padding */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    text-align: center; /* Ensure child elements are centered */
+    height: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .planet-card {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Outer glow */
-    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7)); /* Inner glow */
-    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition effect */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7));
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
     background-clip: padding-box;
     background-color: #2c2c2c;
     border-radius: 10px;
     padding: 20px;
     font-size: 0.9em;
-    /* min-height: 400px; */
-    /* max-height: 500px; */
-    width: 100%; /* Ensure it takes full width of the container */
-    box-sizing: border-box; /* Include padding in width */
+    width: 100%;
+    box-sizing: border-box;
     transition: transform 0.3s ease-out;
-    user-select: none; /* Prevent text selection on the planet card */
-    margin: 0 auto; /* Center the planet card */
-    /* max-width: 500px; Optionally set a max width for better control */
+    user-select: none;
+    margin: 0 auto;
 }
 
 .planet-card img {

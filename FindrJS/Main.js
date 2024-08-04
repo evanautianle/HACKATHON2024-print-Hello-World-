@@ -28,3 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial rendering of the leaderboard
   renderLeaderboard(planets);
 });
+
+document.getElementById('upload-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = new FormData(this);
+  
+  fetch('upload.php', {
+      method: 'POST',
+      body: formData
+  }).then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById('profile-picture').src = data.newProfilePictureUrl;
+        } else {
+            alert('Upload failed.');
+        }
+    });
+});

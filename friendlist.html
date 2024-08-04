@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findr</title>
+    <meta name="description" content="Findr - Your space for connecting with friends and exploring new planets.">
+    <title>Findr - Friends List</title>
     <link rel="stylesheet" href="FindrCss/Findr.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +16,7 @@
 <body>
     <header class="header">
         <div class="countdown">
-            <div class="countdown-container">
-                <img src="images/end.png" alt="End Image" id="end-image">
-                <div id="timer">00:00:00</div>
-            </div>
+            <div id="timer">00:00:00</div>
         </div>
         <div class="logo-container">
             <a href="findr.html" id="logo-link">
@@ -26,27 +24,31 @@
             </a>
         </div>
         <div class="menu-container">
-            <div class="circle">
-                <div class="hamburger-menu" id="hamburger-menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
             <nav class="menu" id="menu">
                 <ul>
                     <li><a href="Findr.html">Home</a></li>
-                    <li><a href="SavedPlanets.html">Saved Planets</a></li>
-                    <li><a href="profile.html">Profile</a></li> 
+                    <li><a href="friendlist.html">Friends</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="Leaderboard.html">Planet Ranks</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container">
-
+        <h1>Friends List</h1>
+        <div id="friends-list"></div>
+        <div class="search-add-container">
+            <input type="text" id="search-friend" placeholder="Search for friends" aria-label="Search friends">
+            <button id="search-btn" aria-label="Search">Search</button>
+            <button id="add-friend" aria-label="Add a friend">Add Friend</button>
+        </div>
     </div>
-    <div id="darken-overlay"></div>
-    <script type="module" src="FindrJS/Main.js"></script>
+    <script src="FindrJS/Main.js"></script>
 </body>
 
 </html>

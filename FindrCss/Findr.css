@@ -111,14 +111,16 @@ h1 {
 .bottom-navbar {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    left: 0px; /* Moves the navbar 20px to the right from the left edge of the viewport */
+    width: 100%; /* Adjusts the width to account for the left offset */
     background-color: #222;
     display: flex;
     justify-content: space-around;
     padding: 5%;
-    box-shadow: 0 -2px 5px rfgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+
 
 .nav-link {
     text-align: center;
@@ -160,7 +162,7 @@ h1 {
 .header #timer {
     font-size: 1em;
     background: #333;
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-radius: 5px;
 }
 

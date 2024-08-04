@@ -226,6 +226,8 @@ h1 {
     text-align: center;
 }
 
+
+
 .profile-container {
     position: absolute;
     top: 50%;
@@ -731,7 +733,11 @@ img {
 
 .profile-description {
     margin-top: 20px;
+    background-color: #555;
+    border-radius: 30px;
+    padding: 20px;
 }
+
 
 .profile-description h2 {
     margin-bottom: 10px;

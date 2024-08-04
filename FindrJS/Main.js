@@ -45,3 +45,4 @@ document.getElementById('upload-form').addEventListener('submit', function(event
         }
     });
 });
+

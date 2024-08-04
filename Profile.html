@@ -47,20 +47,30 @@
             <div class="profile-header">
                 <img src="Images/profile.png" alt="Profile Picture" id="profile-picture">
                 <div>
-                    <h1 id="profile-name">John Doe</h1>
-                    <input type="text" id="name-input" style="display:none;">
-                    <button id="edit-name-btn" onclick="editName()">Edit</button>
-                    <button id="save-name-btn" onclick="saveName()" style="display:none;">Save</button>
-                    <p id="profile-email">johndoe@example.com</p>
+                    <h3 id="profile-name-container">
+                        <div class="name-box"></div>
+                        <span id="profile-name-text">John Doe</span>
+                        <input type="text" id="profile-name-input" value="John Doe" style="display:none;">
+                        <button id="edit-name-btn" onclick="editName()">Edit</button>
+                        <button id="save-name-btn" onclick="saveName()" style="display:none;">Save</button>
+                    </h3>
+                    
+                    <!-- Profile Email Section -->
+                    <p id="profile-email-container">
+                        <span id="profile-email-text">johndoe@example.com</span>
+                        <input type="text" id="profile-email-input" value="johndoe@example.com" style="display:none;">
+                        <button id="edit-email-btn" onclick="editEmail()">Edit</button>
+                        <button id="save-email-btn" onclick="saveEmail()" style="display:none;">Save</button>
+                    </p>
                 </div>
             </div>
+            <h3>Profile Description</h3>
             <div class="profile-description">
-                <h3>Profile Description</h3>
                 <p id="bio-text">Tell us about yourself...</p>
                 <textarea id="bio" name="bio" rows="4" style="display:none;"></textarea>
-                <button id="edit-bio-btn" onclick="editBio()">Edit</button>
-                <button id="save-bio-btn" onclick="saveBio()" style="display:none;">Save</button>
             </div>
+            <button id="edit-bio-btn" onclick="editBio()">Edit</button>
+                <button id="save-bio-btn" onclick="saveBio()" style="display:none;">Save</button>
         </div>
        
         <div id="darken-overlay"></div>
@@ -76,8 +86,6 @@
             <a href="profile.html" class="nav-link">
                 <i class="fas fa-user"></i>
             </a>
-            
         </div>
-</body>
-
+    </body>
 </html>

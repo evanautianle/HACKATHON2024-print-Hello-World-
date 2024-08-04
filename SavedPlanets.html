@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <style>
+        /* Button styles */
+        .clear-all-btn {
+            /* position: fixed; */
+            background-color: #f44336; /* Red background */
+            color: white; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it's above other content */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-bottom: 2em;
+        }
 
+        .clear-all-btn:hover {
+            background-color: #e53935; /* Darker red on hover */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
 <body>
+    <!-- Clear All Button -->
+    
     <header class="header">
         <div class="countdown">
             <div class="countdown-container">
@@ -43,8 +64,10 @@
         </div>
     </header>
     
+    
     <div class="saved-container">
         <h2 class="saved-planets-header">Saved Planets:</h2>
+        <button id="clear-all-btn" class="clear-all-btn">Clear All</button>
         <section class="planet-grid" id="planet-grid">
             <!-- Planet cards will be inserted here dynamically -->
         </section>
@@ -63,6 +86,18 @@
             <i class="fas fa-user"></i>
         </a>
     </div>
-</body>
 
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('clear-all-btn').addEventListener('click', () => {
+            // Clear the displayed planet cards
+            const planetGrid = document.getElementById('planet-grid');
+            planetGrid.innerHTML = ''; // Clear all planet cards
+    
+            // Clear local storage
+            localStorage.removeItem('savedPlanets'); // Adjust this key to match what you're using in local storage
+        });
+    </script>
+    
+</body>
 </html>

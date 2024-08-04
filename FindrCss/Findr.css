@@ -290,6 +290,21 @@ h1 {
     margin: 0 auto;
 }
 
+@media (max-width: 400px) {
+    .planet-card {
+
+        width: 90%;
+        
+    }
+    .header #logo {
+        max-width: 90px;
+        
+    }
+    .header {
+        min-height: 0;
+    }
+}
+
 .planet-card img {
     background: #000;
     width: 80em; /* Scale image to container width */

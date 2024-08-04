@@ -9,8 +9,10 @@
     text-decoration: none;
 }
 
-body, html {
-    overflow: hidden; /* Prevent page scrolling */
+body,
+html {
+    overflow: hidden;
+    /* Prevent page scrolling */
     margin: 0;
     padding: 0;
     height: 100%;
@@ -102,14 +104,22 @@ body {
 
 
 .container {
-    max-width: 1200px; /* Set a max-width for better control */
-    margin: 0 auto; /* Center the container horizontally */
-    padding-top: 130px; /* Add some horizontal padding */
-    background-image: url('path/to/your/background.gif'); /* Set the GIF background */
-    background-size: cover; /* Cover the entire container */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-position: center; /* Center the image */
-    max-height: 80vh; /* Adjust this value as needed */
+    max-width: 1200px;
+    /* Set a max-width for better control */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding-top: 130px;
+    /* Add some horizontal padding */
+    background-image: url('path/to/your/background.gif');
+    /* Set the GIF background */
+    background-size: cover;
+    /* Cover the entire container */
+    background-repeat: no-repeat;
+    /* Prevent repeating the image */
+    background-position: center;
+    /* Center the image */
+    max-height: 80vh;
+    /* Adjust this value as needed */
     overflow-y: auto;
     padding: 20px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
@@ -117,7 +127,8 @@ body {
 
 .saved-container {
     max-width: 1200px;
-    margin: 80px auto 0; /* Adjust the top margin to move the container down */
+    margin: 80px auto 0;
+    /* Adjust the top margin to move the container down */
     background-image: url('path/to/your/background.gif');
     background-size: cover;
     background-repeat: no-repeat;
@@ -130,12 +141,17 @@ body {
 
 .saved-planets-header {
     /* Add your styles here */
-    font-size: 24px; /* Example size */
-    font-weight: bold; /* Example weight */
-    color: #ffffff; /* Example color */
-    margin-bottom: 50px; /* Space below the header */
+    font-size: 24px;
+    /* Example size */
+    font-weight: bold;
+    /* Example weight */
+    color: #ffffff;
+    /* Example color */
+    margin-bottom: 50px;
+    /* Space below the header */
     padding: 15px 10px 15px 10px;
-    text-align: center; /* Center-align the text */
+    text-align: center;
+    /* Center-align the text */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
     filter: drop-shadow(0 0 20px rgba(239, 242, 242, 0.7));
     transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
@@ -145,7 +161,8 @@ body {
 
 
 footer {
-    padding-top: 10px; /* Moves the text down by 10 pixels */
+    padding-top: 10px;
+    /* Moves the text down by 10 pixels */
     /* Alternatively, you can use margin-top instead of padding-top */
 }
 
@@ -159,8 +176,10 @@ h1 {
 .bottom-navbar {
     position: fixed;
     bottom: 0;
-    left: 0px; /* Moves the navbar 20px to the right from the left edge of the viewport */
-    width: 100%; /* Adjusts the width to account for the left offset */
+    left: 0px;
+    /* Moves the navbar 20px to the right from the left edge of the viewport */
+    width: 100%;
+    /* Adjusts the width to account for the left offset */
     background-color: #222;
     display: flex;
     justify-content: space-around;
@@ -188,17 +207,22 @@ h1 {
 }
 
 .header {
-    position: fixed; /* Fixed positioning to keep the header at the bottom */
-    top: 0; /* Position it at the bottom of the viewport */
-    left: 0; /* Ensure it starts from the left edge */
+    position: fixed;
+    /* Fixed positioning to keep the header at the bottom */
+    top: 0;
+    /* Position it at the bottom of the viewport */
+    left: 0;
+    /* Ensure it starts from the left edge */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2%;
     background-color: #222;
     min-height: 80px;
-    width: 100%; /* Ensure it spans the full width of the viewport */
-    z-index: 10000; /* Ensure it stays above other content */
+    width: 100%;
+    /* Ensure it spans the full width of the viewport */
+    z-index: 10000;
+    /* Ensure it stays above other content */
 }
 
 .header .countdown {
@@ -295,12 +319,14 @@ h1 {
     .planet-card {
 
         width: 90%;
-        
+
     }
+
     .header #logo {
         max-width: 90px;
-        
+
     }
+
     .header {
         min-height: 0;
     }
@@ -308,8 +334,10 @@ h1 {
 
 .planet-card img {
     background: #000;
-    width: 80em; /* Scale image to container width */
-    height: auto; /* Maintain aspect ratio */
+    width: 80em;
+    /* Scale image to container width */
+    height: auto;
+    /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
@@ -325,9 +353,11 @@ h1 {
 
 .planet-card button {
     font-family: 'Rubik', sans-serif;
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;
+    /* Green background */
     border: none;
-    color: white; /* White text */
+    color: white;
+    /* White text */
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -359,7 +389,8 @@ h1 {
 }
 
 .planet-card .remove {
-    background-color: #f44336; /* Red background */
+    background-color: #f44336;
+    /* Red background */
 }
 
 .planet-card .remove:hover {
@@ -447,7 +478,8 @@ img {
 .menu {
     position: fixed;
     top: 0;
-    right: -300px; /* Initially off-screen */
+    right: -300px;
+    /* Initially off-screen */
     width: 300px;
     height: 100%;
     background-color: #222;
@@ -455,43 +487,61 @@ img {
     z-index: 400;
     overflow-y: auto;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
     font-size: 1.5rem;
 }
 
 .menu-container {
     display: flex;
-    justify-content: flex-start; /* Align buttons to the start (top in this case) */
-    align-items: center; /* Center buttons vertically within the container */
-    padding: 10px; /* Add some padding if needed */
+    justify-content: flex-start;
+    /* Align buttons to the start (top in this case) */
+    align-items: center;
+    /* Center buttons vertically within the container */
+    padding: 10px;
+    /* Add some padding if needed */
 }
 
 .menu-button {
-    border: 2px solid #727171; /* Border color */
-    background-color: #727171; /* Background color to match the border */
-    color: #ffffff; /* Text color for contrast */
-    padding: 10px 20px; /* Padding for spacing inside the button */
-    text-decoration: none; /* Remove underline if the buttons are links */
-    display: inline-block; /* Ensure the button respects padding and border */
-    margin-right: 15px; /* Space buttons out by 15 pixels */
-    font-size: 16px; /* Adjust font size if needed */
-    text-align: center; /* Center text inside button */
+    border: 2px solid #727171;
+    /* Border color */
+    background-color: #727171;
+    /* Background color to match the border */
+    color: #ffffff;
+    /* Text color for contrast */
+    padding: 10px 20px;
+    /* Padding for spacing inside the button */
+    text-decoration: none;
+    /* Remove underline if the buttons are links */
+    display: inline-block;
+    /* Ensure the button respects padding and border */
+    margin-right: 15px;
+    /* Space buttons out by 15 pixels */
+    font-size: 16px;
+    /* Adjust font size if needed */
+    text-align: center;
+    /* Center text inside button */
     border-radius: 10px;
 }
 
 .menu-button:last-child {
-    margin-right: 0; /* Remove margin for the last button */
+    margin-right: 0;
+    /* Remove margin for the last button */
 }
 
 .menu-button:hover {
-    background-color: #eee; /* Lighten background on hover if desired */
-    border-color: #000; /* Change border color on hover if desired */
+    background-color: #eee;
+    /* Lighten background on hover if desired */
+    border-color: #000;
+    /* Change border color on hover if desired */
 }
 
 
 .menu.show {
-    right: 0; /* Slide-in position */
+    right: 0;
+    /* Slide-in position */
 }
 
 #darken-overlay {
@@ -720,19 +770,24 @@ img {
         transform: translateY(100%);
         opacity: 0;
     }
+
     50% {
         transform: translateY(-20%);
         opacity: 1;
     }
+
     55% {
         transform: translateY(10%);
     }
+
     70% {
         transform: translateY(-10%);
     }
+
     85% {
         transform: translateY(3%);
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -740,7 +795,8 @@ img {
 }
 
 .bounce {
-    animation: bounceIn 1.5s cubic-bezier(0.25, 0.1, 0.25, 1.0); /* Adjusted easing function for smoother effect */
+    animation: bounceIn 1.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    /* Adjusted easing function for smoother effect */
 }
 
 .popup {
@@ -756,8 +812,10 @@ img {
     transform: translate(-50%, -50%);
     overflow-y: auto;
     border-radius: 10px;
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    /* Remove default margins */
+    padding: 0;
+    /* Remove default padding */
 }
 
 .popup-content {
@@ -768,8 +826,10 @@ img {
     width: 100%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    /* Remove default margins */
+    padding: 0;
+    /* Remove default padding */
 }
 
 .popup-topbar {
@@ -788,10 +848,14 @@ img {
 #popup-planet-name {
     background-color: #444;
     border-radius: 10px;
-    color: white; /* Ensure text is readable against the background */
-    padding: 10px; /* Add some padding for better appearance */
-    text-align: center; /* Center text horizontally */
-    display: inline-block; /* Make the background color wrap tightly around the text */
+    color: white;
+    /* Ensure text is readable against the background */
+    padding: 10px;
+    /* Add some padding for better appearance */
+    text-align: center;
+    /* Center text horizontally */
+    display: inline-block;
+    /* Make the background color wrap tightly around the text */
 }
 
 #popup-planet-image {
@@ -841,8 +905,10 @@ img {
 
 .profile-header {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
     margin-bottom: 20px;
 }
 
@@ -851,12 +917,14 @@ img {
     width: 120px;
     height: 120px;
     object-fit: cover;
-    margin-bottom: 20px; /* Space below the image */
+    margin-bottom: 20px;
+    /* Space below the image */
 }
 
 .profile-header h1 {
     margin: 0;
-    font-size: 1.5em; /* Slightly smaller font size for mobile */
+    font-size: 1.5em;
+    /* Slightly smaller font size for mobile */
 }
 
 /* Mobile Styles */
@@ -867,16 +935,20 @@ img {
 
     .container {
         padding: 15px;
-        margin: 0; /* Remove margin for mobile */
+        margin: 0;
+        /* Remove margin for mobile */
     }
-    
+
     .profile-header img {
-        width: 100px; /* Adjust size for smaller screens */
-        height: 100px; /* Adjust size for smaller screens */
+        width: 100px;
+        /* Adjust size for smaller screens */
+        height: 100px;
+        /* Adjust size for smaller screens */
     }
 
     .profile-header h1 {
-        font-size: 1.2em; /* Adjust font size for smaller screens */
+        font-size: 1.2em;
+        /* Adjust font size for smaller screens */
     }
 }
 
@@ -919,11 +991,15 @@ img {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-input[type="file"], /* Adjusting file input text color may not work in all browsers */
+input[type="file"],
+/* Adjusting file input text color may not work in all browsers */
 textarea {
-    color: #333; /* Dark grey color */
-    font-size: 16px; /* Adjust as needed */
-    line-height: 1.5; /* Adjust for better readability */
+    color: #333;
+    /* Dark grey color */
+    font-size: 16px;
+    /* Adjust as needed */
+    line-height: 1.5;
+    /* Adjust for better readability */
 }
 
 /* Additional styling for input and textarea fields */
@@ -931,13 +1007,18 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea {
-    border: 1px solid #ccc; /* Light grey border */
-    padding: 10px; /* Space inside the field */
-    border-radius: 5px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    border: 1px solid #ccc;
+    /* Light grey border */
+    padding: 10px;
+    /* Space inside the field */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
 }
 
 /* For file input */
 input[type="file"] {
-    color: #333; /* May not always be supported, but included for consistency */
+    color: #333;
+    /* May not always be supported, but included for consistency */
 }

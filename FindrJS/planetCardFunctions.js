@@ -38,7 +38,7 @@ export class PlanetSwipe {
                 humidity: '90%', 
                 temperature: '12°C', 
                 population: '0', 
-                funFact: 'Covered in dark, crystalline minerals.' 
+                funFact: 'Nebularis\' crystal exterior makes it painful to walk on.' 
             },
             { 
                 name: 'Stellarion', 
@@ -47,7 +47,7 @@ export class PlanetSwipe {
                 humidity: '30%', 
                 temperature: '20°C', 
                 population: '1.1 billion', 
-                funFact: 'Known as the Red Planet.' 
+                funFact: 'Unbelievably hot, population of alien species with magma bodies.' 
             },
             { 
                 name: 'Cat Girl Planet', 
@@ -56,7 +56,7 @@ export class PlanetSwipe {
                 humidity: '40%', 
                 temperature: '22°C', 
                 population: '5 billion', 
-                funFact: 'Known for its Great Red Spot.' 
+                funFact: 'Cat girls aren\'t as nice as you might think.' 
             },
             { 
                 name: 'Luminara', 

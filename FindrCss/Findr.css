@@ -13,6 +13,18 @@ body, html {
     overflow: hidden; /* Prevent page scrolling */
 }
 
+/* Landscape mode */
+@media screen and (orientation: landscape) {
+    body {
+        transform: rotate(90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow: hidden;
+    }
+}
+
+
 .top-text {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -257,7 +269,6 @@ h1 {
     transition: transform 0.3s ease-out;
     user-select: none;
     margin: 0 auto;
-
 }
 
 .planet-card {
@@ -270,7 +281,7 @@ h1 {
     padding: 20px;
     font-size: 0.9em;
     width: 100%;
-    max-width: 85%;
+    height: 80%;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
     user-select: none;
@@ -279,7 +290,7 @@ h1 {
 
 .planet-card img {
     background: #000;
-    width: 100%; /* Scale image to container width */
+    width: 80em; /* Scale image to container width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
 }
@@ -714,6 +725,94 @@ img {
     animation: bounceIn 1.5s cubic-bezier(0.25, 0.1, 0.25, 1.0); /* Adjusted easing function for smoother effect */
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    /* background: rgba(0, 0, 0, 0.8); */
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.popup-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.popup-topbar {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    gap: 10px;
+    margin-top: 38em;
+    margin-bottom: 10px;
+}
+
+#close-popup {
+    cursor: pointer;
+    font-size: 2.4em;
+}
+
+#popup-planet-name {
+    background-color: #444;
+    border-radius: 10px;
+    color: white; /* Ensure text is readable against the background */
+    padding: 10px; /* Add some padding for better appearance */
+    text-align: center; /* Center text horizontally */
+    display: inline-block; /* Make the background color wrap tightly around the text */
+}
+
+#popup-planet-image {
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.popup-info {
+    background-color: #444;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.popup-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.stat-box {
+    border-radius: 8px;
+    background-color: #444;
+    padding: 10px;
+}
+
+.stat-box h3 {
+    margin: 0 0 5px 0;
+}
+
+.stat-box p {
+    margin: 0;
+}
+
+.show-popup {
+    display: flex;
+}
+
+#darken-overlay.show-overlay {
+    /* Add styling for the darken overlay if needed */
+    visibility: hidden;
+}
 
 
 

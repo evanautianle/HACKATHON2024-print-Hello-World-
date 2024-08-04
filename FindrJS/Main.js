@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const planetCardElement = document.getElementById("planet-card");
   const arrowRightElement = document.getElementById("arrow-right");
   const arrowLeftElement = document.getElementById("arrow-left");
-  new PlanetSwipe(planetCardElement, arrowRightElement, arrowLeftElement);
+  const planetSwipe = new PlanetSwipe(planetCardElement, arrowRightElement, arrowLeftElement);
 
   // Friends List Functionality
   populateFriendsList();

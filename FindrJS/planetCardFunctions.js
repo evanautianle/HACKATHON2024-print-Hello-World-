@@ -232,6 +232,13 @@ export class PlanetSwipe {
     }
 
     attachEventListeners() {
+        this.planetCard.addEventListener("click", (e) => {
+            this.showPlanetPopup();
+            if (darkenOverlay) {
+                darkenOverlay.classList.toggle('darken'); // Add or remove the darken class
+            }
+        });
+
         // Handle mouse events
         this.planetCard.addEventListener("mousedown", (e) => {
             this.startX = e.clientX;
@@ -273,6 +280,43 @@ export class PlanetSwipe {
                 this.snapToPosition(e.changedTouches[0].clientX);
             }
         });
+
+        document.getElementById("close-popup").addEventListener("click", () => {
+            this.closePlanetPopup();
+            darkenOverlay.classList.remove('darken');
+        });
+    }
+
+    showPlanetPopup() {
+        const planet = this.planetData[this.currentPlanetIndex];
+        document.getElementById("popup-planet-name").textContent = planet.name;
+        document.getElementById("popup-planet-image").src = planet.img;
+        document.getElementById("popup-planet-info").textContent = planet.info;
+        document.getElementById("popup-planet-humidity").textContent = planet.humidity;
+        document.getElementById("popup-planet-temperature").textContent = planet.temperature;
+        document.getElementById("popup-planet-population").textContent = planet.population;
+        document.getElementById("popup-planet-fun-fact").textContent = planet.funFact;
+        document.getElementById("popup-planet-phone").textContent = planet.phone || "N/A";
+        document.getElementById("popup-planet-email").textContent = planet.email || "N/A";
+        document.getElementById("popup-planet-currency-ratio").textContent = `1 USD = ${planet.currencyRatio} ${planet.name} Units`;
+        document.getElementById("popup-planet-median-income").textContent = planet.medianIncome || "N/A";
+        document.getElementById("popup-planet-terrain").textContent = planet.terrain || "N/A";
+        document.getElementById("popup-planet-rating").textContent = `${planet.rating || "N/A"}/5`;
+        document.getElementById("popup-planet-civilization-status").textContent = planet.civilizationStatus || "N/A";
+        document.getElementById("popup-planet-languages").textContent = planet.internationalLanguages ? planet.internationalLanguages.join(', ') : "N/A";
+        document.getElementById("popup-planet-education-status").textContent = planet.educationStatus || "N/A";
+        document.getElementById("popup-planet-survival-rate").textContent = planet.survivalRate || "N/A";
+    
+        document.getElementById("planet-popup").classList.add("show-popup");
+    
+        const darkenOverlay = document.getElementById('darken-overlay');
+        if (darkenOverlay) {
+            darkenOverlay.classList.add('show-overlay');
+        }
+    }        
+
+    closePlanetPopup() {
+        document.getElementById("planet-popup").classList.remove("show-popup");
     }
 
     deletePlanet() {

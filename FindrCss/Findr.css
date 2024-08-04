@@ -97,7 +97,6 @@ body {
     max-height: 80vh; /* Adjust this value as needed */
     overflow-y: auto;
     padding: 20px;
-    background-color: ;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

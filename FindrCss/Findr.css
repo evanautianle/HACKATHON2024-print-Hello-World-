@@ -557,3 +557,105 @@ img {
 
 
 
+.profile-header {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.profile-header h1 {
+    margin: 0;
+    font-size: 1.5em; /* Slightly smaller font size for mobile */
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 0; /* Remove margin for mobile */
+    }
+    
+    .profile-header img {
+        width: 100px; /* Adjust size for smaller screens */
+        height: 100px; /* Adjust size for smaller screens */
+    }
+
+    .profile-header h1 {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+}
+
+.profile-description {
+    margin-top: 20px;
+}
+
+.profile-description h2 {
+    margin-bottom: 10px;
+}
+
+.profile-description label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.profile-description textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.profile-description input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-description input[type="submit"]:hover {
+    background: #555;
+}
+
+/* For text inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"], /* Adjusting file input text color may not work in all browsers */
+textarea {
+    color: #333; /* Dark grey color */
+    font-size: 16px; /* Adjust as needed */
+    line-height: 1.5; /* Adjust for better readability */
+}
+
+/* Additional styling for input and textarea fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    border: 1px solid #ccc; /* Light grey border */
+    padding: 10px; /* Space inside the field */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* For file input */
+input[type="file"] {
+    color: #333; /* May not always be supported, but included for consistency */
+}

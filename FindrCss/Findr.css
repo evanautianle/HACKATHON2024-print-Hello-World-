@@ -433,6 +433,35 @@ img {
     font-size: 1.5rem;
 }
 
+.menu-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the start (top in this case) */
+    align-items: center; /* Center buttons vertically within the container */
+    padding: 10px; /* Add some padding if needed */
+}
+
+.menu-button {
+    border: 2px solid #727171; /* Border color */
+    background-color: #727171; /* Background color to match the border */
+    color: #ffffff; /* Text color for contrast */
+    padding: 10px 20px; /* Padding for spacing inside the button */
+    text-decoration: none; /* Remove underline if the buttons are links */
+    display: inline-block; /* Ensure the button respects padding and border */
+    margin-right: 15px; /* Space buttons out by 15 pixels */
+    font-size: 16px; /* Adjust font size if needed */
+    text-align: center; /* Center text inside button */
+    border-radius: 10px;
+}
+
+.menu-button:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+}
+
+.menu-button:hover {
+    background-color: #eee; /* Lighten background on hover if desired */
+    border-color: #000; /* Change border color on hover if desired */
+}
+
 
 .menu.show {
     right: 0; /* Slide-in position */

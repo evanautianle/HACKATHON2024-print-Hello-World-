@@ -191,8 +191,7 @@ export class PlanetSwipe {
                 this.planetCard.style.boxShadow = "none"; // Ensure box shadow is removed after swipe
             }, 50); // Slight delay for reset transition
         }, 400); // Adjust delay to match transition duration
-    }    
-    
+    }
 
     snapToPosition(finalX) {
         const swipeDistance = finalX - this.startX;
@@ -211,7 +210,7 @@ export class PlanetSwipe {
             this.planetCard.style.opacity = 1;
             this.planetCard.style.boxShadow = "none"; // Remove box shadow if swipe is not completed
         }
-    }    
+    }
 
     handleDrag(e) {
         const currentX = e.clientX || e.touches[0].clientX;
@@ -325,8 +324,47 @@ export class PlanetSwipe {
 
     savePlanet() {
         const planet = this.planetData[this.currentPlanetIndex];
-        this.savedPlanets.push(planet);
-        localStorage.setItem('savedPlanets', JSON.stringify(this.savedPlanets));
-        console.log("Planet saved:", planet);
+        if (planet) {
+            this.savedPlanets.push(planet);
+            localStorage.setItem('savedPlanets', JSON.stringify(this.savedPlanets));
+            console.log("Planet saved:", planet);
+            showSaveMessage(); // Call showSaveMessage after saving the planet
+        } else {
+            console.log("No planet to save.");
+        }
     }
+}
+
+// Function to show the save message
+function showSaveMessage() {
+    const messageElement = document.createElement("div");
+    messageElement.textContent = "Planet saved to favourites";
+    messageElement.style.position = "fixed";
+    messageElement.style.top = "80%";
+    messageElement.style.left = "50%";
+    messageElement.style.transform = "translate(-50%, 0)";
+    messageElement.style.padding = "10px 20px";
+    messageElement.style.backgroundColor = "rgba(76, 175, 80, 0.8)"; // Green background with 80% opacity
+    messageElement.style.color = "#fff";
+    messageElement.style.borderRadius = "5px";
+    messageElement.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
+    messageElement.style.zIndex = "1000";
+    messageElement.style.opacity = "0"; // Start with hidden opacity
+    messageElement.style.transition = "opacity 0.5s ease-in-out";
+    
+    document.body.appendChild(messageElement);
+
+    // Trigger a reflow to ensure the transition works
+    void messageElement.offsetWidth;
+
+    // Make the message visible
+    messageElement.style.opacity = "1";
+
+    // Fade out the message after 2 seconds
+    setTimeout(() => {
+        messageElement.style.opacity = "0";
+        setTimeout(() => {
+            messageElement.remove();
+        }, 500); // Delay to match the transition duration
+    }, 2000); // Duration to show the message
 }

@@ -1,4 +1,6 @@
-# Finder - Save the Planets
+# Finder 
+
+![Screenshot of Findr](Images/FindrScreenshot.PNG)
 
 Finder is a unique web application inspired by Tinder, where you can save planets by swiping right. Access your saved planets and learn more about the cosmos while contributing to the ultimate theme of escaping Earth.
 
@@ -9,6 +11,14 @@ This project was created as part of a hackathon organized by SESA x WDCC. The th
 ## Team
 
 **Team Name:** `print("hello world")`
+
+### Team members
+- Andre Camerino
+- Evan Au
+- Jayden Newport
+- Ashlee Shum
+- Gabrielle Esguerra
+- Lucas Fontaine
 
 ## Features
 
